@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking - Account Summary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-menu {
+            background-color: #162159;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: white;
+        }
+        .logout-btn {
+            background-color: #FF1493;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            color: #162159;
+        }
+        .sidebar-menu li {
+            padding-bottom: 10px;
+        }
+        .sidebar-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-menu li a {
+            color: #FF1493;
+            text-decoration: none;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .account-card {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .account-card-header {
+            background-color: #162159;
+            color: white;
+            padding: 10px;
+        }
+        .account-card-body {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .account-card-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .account-card-footer a {
+            color: #FF1493;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .savings-goal-card {
+            background-color: #162159;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+        .quick-transfer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .form-select, .form-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-button {
+            background-color: #1c7430;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form-button:hover {
+            background-color: #34ce57;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .products-sidebar {
+            width: 200px;
+            padding: 20px;
+            
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .product-list li::before {
+            content: "➔";
+            color: #FF1493;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .products-sidebar {
+                width: 100%;
+                order: 1;
+            }
+            
+            .main-content {
+                order: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="main-menu">
+        <div class="logo">Logo</div>
+        <button class="logout-btn"><a href="{% url 'authenticating:logout' %}">Logout</a></button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Digital Banking</h2>
+            <ul class="sidebar-menu">
+                <li><a href="{% url 'authenticating:dashboard' %}">Account Summary</a></li>
+                <li><a href="#">Payments and Transfer</a></li>
+                <li><a href="#">Statements</a></li>
+                <li><a href="#">Mailbox</a></li>
+                <li><a href="#">Paperless Settings</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Your Details</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+            
+            
+
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+
+
+
+        </div>
+        <div class="main-content">
+            <h1 style="color: #162159;">Payments and Transfers</h1>
+           
+
+            <div style="padding: 10px;" class="account-card">
+                <div class="account-card-header">Make a payment or transfer</div>
+                <p>
+                    Pay bills, manage payees (the people you want to pay) or transfer money. Remember to have your card-reader ready
+                </p>
+                <ul class="product-list">
+                    <a href="{% url 'transactions:make_payment' %}"><li style='color: #FF1493'>Make a payment or transfer</li></a>
+                    <li style='color: #FF1493'>Manage payees</li>
+                    <li style='color: #FF1493'>Manage scheduled payments</li>
+                    <li style='color: #FF1493'>View recent payments</li>
+                    
+                </ul>
+            </div>
+            
+            <div style="padding: 10px;" class="account-card">
+                <div class="account-card-header">International payments</div>
+                <p>
+                    Make a payment from your account to an account overseas.
+                </p>
+                <ul class="product-list">
+                    <a href="#"><li style='color: #FF1493'>Make a payment</li></a>
+                    <li style='color: #FF1493'>Manage beneficiaries</li>
+                    <li style='color: #FF1493'>Manage scheduled payments</li>
+                    <li style='color: #FF1493'>View recent payments</li>
+                    
+                </ul>
+            </div>
+
+
+            <div style="padding: 10px;" class="account-card">
+                <div class="account-card-header">Direct debits</div>
+                <p>
+                    View or cancel any of your existing direct debits.
+                </p>
+                <ul class="product-list">
+                    <li style='color: #FF1493'>Manage direct debits</li>
+                    
+                </ul>
+
+                <p>
+                    To set up or amend a direct debit - you must contact the Originator (the company who set up the direct debit mandate).
+                </p>
+            </div>
+
+            <div style="padding: 10px;" class="account-card">
+                <div class="account-card-header">Standing orders</div>
+                <p>
+                    Set up, amend or cancel standing orders. Remember to have your card-reader ready if you are creating or amending a standing order.
+                </p>
+                <ul class="product-list">
+                    <li style='color: #FF1493'>Create a new standing order</li>
+                    <li style='color: #FF1493'>Manage standing orders</li>
+                </ul>
+
+                <p>
+                    Important: If you wish to amend a recently created standing order or where the payment date is imminent, it might not be possible to do this in Digital Banking.
+                </p>
+            </div>
+
+            <div style="padding: 10px;" class="account-card">
+                <div class="account-card-header">Credit/cheque books</div>
+                <p>
+                    Order a credit or cheque book (replacement not first time order). Important: Cheque books are not available for savings or youth account and will not be issued.
+                </p>
+                
+            </div>
+
+        </div>
+
+
+
+
+        <div class="products-sidebar">
+            <h3 style="color: #162159;">Our Products</h3>
+            <h5 style="color: #162159;">Personal Products</h5>
+            <ul class="product-list">
+                <li>Savings accounts</li>
+                <li>Cash ISAs</li>
+                <li>Current accounts</li>
+                <li>Upgrade your account</li>
+                <li>Credit cards</li>
+                <li>Overdrafts</li>
+                <li>Loans</li>
+                <li>Mortgages</li>
+                <li>Insurance</li>
+                <li>Travel money</li>
+                <li>Investment products</li>
+                <li>Mobile app</li>
+                <li>What's new</li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
+

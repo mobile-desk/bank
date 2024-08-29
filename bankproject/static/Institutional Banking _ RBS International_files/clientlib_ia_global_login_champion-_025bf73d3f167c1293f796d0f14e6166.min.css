@@ -1,0 +1,132 @@
+@charset "UTF-8";.iah__login_l1{padding-left:30px;float:right;padding-top:8px;padding-bottom:8px}
+.iah__login-link{color:#fff;text-decoration:none;letter-spacing:.16px;padding:6px 20px 6px 42px;cursor:pointer;display:inline-block;background:transparent url("clientlib_ia_global_login_champion/resources/images/Login-white.svg") no-repeat 13px;height:100%;outline:1px solid #be99e6;line-height:20px;border-radius:16px}
+@media(min-width:1024px){.safari .iah__login-link{outline:0;border-radius:19px;border:2px solid #be99e6}
+}
+.iah__login-link .lock-icon{position:absolute;height:22px;width:18px;top:13px;left:12px}
+.iah__login-link:hover{color:#fff;text-decoration:none;outline:1px solid #fff !important}
+@media(max-width:1023px){.iah__login-link:hover{outline:0 !important}
+.safari .iah__login-link:hover{border:1px solid #fff !important}
+}
+.iah__login-link:focus{outline:2px solid #fff !important}
+@media(min-width:1024px){.iah__login-link.login_dropdown{padding-right:42px}
+}
+.iah__login-link.login_dropdown .dropdown_icon{background:transparent url("clientlib_ia_global_login_champion/resources/images/inactive-Chevron.svg") no-repeat;height:9px;width:15px;position:absolute;right:16px;top:20px}
+.iah__login-link.login_dropdown[aria-expanded="true"]{outline:2px solid #fff !important;outline-offset:-1px}
+.iah__login-link.login_dropdown[aria-expanded="true"] .dropdown_icon{background:transparent url("clientlib_ia_global_login_champion/resources/images/active-Chevron.svg") no-repeat}
+.safari .iah__login-link.login_dropdown[aria-expanded="true"]{outline:1px solid #fff !important}
+.iah__login-link.login_dropdown:focus{color:#fff !important}
+.iah__l2--visible-md .iah__login-link,.iah__l2--visible-sm .iah__login-link{display:none}
+img.lock-black-icon{display:none}
+.iah__l1__right a:hover:after{width:100%}
+.iah__ulster__changerepublic{float:left;padding-right:60px;font-size:14px;line-height:30px;letter-spacing:normal;color:#fff;background:#3c1053 url("clientlib_ia_global_login_champion/resources/images/Switchnew.svg");background-repeat:no-repeat;padding:9px 60px 9px 26px;background-position:0 16px;text-decoration:none}
+.responsive_ulster_ni_personal .iah__ulster__changerepublic,.responsive_ulster_ni_business .iah__ulster__changerepublic,.responsive_ulster_roi_personal .iah__ulster__changerepublic,.responsive_ulster_roi_business .iah__ulster__changerepublic{padding:9px 60px 9px 45px;background-position:10px 8px;background-size:32px}
+.iah__ulster__changerepublic:hover,.iah__ulster__changerepublic:focus{text-decoration:none;color:#fff}
+.iah__ulster__changerepublic.changerepublic-mobile{display:none}
+body .iah .spoke__hide{display:none !important}
+body .iah .spoke__bg{background:#002d64}
+.iah a.iah__ulster__changerepublic.changerepublic-mobile{display:none}
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.main-wrapper .iah a.iah__ulster__changerepublic:focus{outline:1px dotted #fff !important;outline-offset:-2px}
+}
+@-moz-document url-prefix(){.main-wrapper .iah.iah--responsive a.iah__ulster__changerepublic:focus{outline:1px dotted #fff !important;outline-offset:-2px}
+.main-wrapper .iah.iah--responsive .iah__search .iah__search__navbar-collapse .iah__search__wrap .iah__search__form .iah__search-area .iah__search_submt_btn:focus{outline:1px dotted #fff !important}
+.ia__footer .footer__list--right .icon-fscs:focus{outline:1px dotted #fff}
+html .main-wrapper .iah--adaptive .iah__l1 .iah__l1__right .iah__login__dropdown-topsection ul li a:focus{outline:1px solid #5e10b1 !important}
+}
+.iah a.iah__ulster__changerepublic{float:left;padding-right:30px;color:#fff}
+.iah a.iah__ulster__changerepublic:focus{outline-color:#fff !important;outline:1px auto #fff !important}
+.iah__ulster_switch{float:left}
+@media(max-width:1023px){img.lock-black-icon{display:block;margin:auto}
+.iah__login{position:absolute;padding-top:0;padding-bottom:0;margin-left:19px;margin-right:19px}
+.responsive_natwest_business .iah__login{margin-left:0}
+.responsive_natwest_business .iah__login .iah__login__dropdown-topsection{margin-left:19px}
+.responsive_natwest_business .iah__login .iah__login-link:not(.login_dropdown){margin-left:19px}
+img.lock-icon{display:none}
+.iah__l2--visible-md .iah__login-link,.iah__l2--visible-sm .iah__login-link{display:block}
+.iah__login-link{color:#fff;font-size:16px;text-decoration:none;line-height:30px;padding:0;background-repeat:no-repeat;padding-top:31px;background-position:center 13px;outline:0}
+.iah__login-link:hover,.iah__login-link:focus{color:#fff;text-decoration:none}
+html:not(.firefox) .iah__login-link:focus{outline:1px auto #fff !important}
+}
+@media screen and (max-width:1023px) and (-ms-high-contrast:active),(max-width:1023px) and (-ms-high-contrast:none){.iah__login-link:focus{outline:1px auto #fff !important}
+}
+@media(max-width:1023px){.iah__login-link .lock-icon{position:absolute;height:22px;width:22px;top:10px;left:calc(50% - 11px)}
+.iah__login-link.login_dropdown{line-height:18px;padding-top:13px;background-position:15px 9px;padding-left:36px}
+.iah__login-link.login_dropdown .dropdown_icon{left:38px;top:41px}
+.iah__login:after{content:"";width:2px;height:37px;position:absolute;background-color:#8b3fb2;right:-19px;top:12px}
+.responsive_natwest_group .iah__login:after{display:none}
+.iah__login{font-size:16px}
+.iah__ulster__changerepublic{display:none}
+.iah .iah__ulster__changerepublic.changerepublic-mobile{display:block;width:100%;font-size:18px;padding:15px 18px 15px 44px;background-position:16px;z-index:9;position:relative}
+}
+@media(max-width:767px){.iah__mb__search .iah__mb__login .iah__btn__tabs span{display:inline-block}
+.iah__login{padding-top:0;font-size:14px}
+.iah__login-link{font-size:14px}
+.iah__login´┐¢{font-size:14px}
+.iah__login-link{padding-top:29px}
+.iah__login-link.iah__login__dropdown{padding-top:13px}
+.iah .iah__ulster__changerepublic.changerepublic-mobile{font-size:14px}
+}
+html:not(.firefox) .main-wrapper .iah__l1 ul li a:focus,html:not(.firefox) .main-wrapper .iah__l1 ul li a:hover:focus{outline:1px auto #fff !important}
+.main-wrapper .iah__l1 .iah__l1__right .iah__login__dropdown-topsection ul li a:focus{outline:0 !important;background:#3c1053;color:#fff}
+.iah.iah--adaptive a:focus{overflow:inherit}
+.ia__footer.ia__footer--adaptive a:focus{overflow:initial}
+.iah__login__dropdown{display:none}
+.iah__login__dropdown a{text-decoration:none;color:#333;display:inline-block;padding:0;font-size:14px;line-height:26px}
+html:not(.firefox) .iah__login__dropdown a:focus{outline:1px auto #5e10b1 !important}
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.iah__login__dropdown a:focus{outline:1px auto #5e10b1 !important}
+}
+.iah__login__dropdown a:after{background:#5e10b1}
+.iah__login__dropdown.active{display:block;width:258px;position:absolute;overflow:hidden;z-index:9999;text-align:left;right:0;top:48px}
+@media(min-width:1024px){.iah__login__dropdown.active:before{content:"";position:absolute;right:9px;top:-10px;border-right:9px solid transparent;border-bottom:12px solid #f5f5f5;border-left:9px solid transparent}
+}
+.iah__login__dropdown .iah__login__dropdown-topsection{background:#fff}
+@media(max-width:1023px) and (min-width:768px){.iah__login__dropdown .iah__login__dropdown-topsection{padding-left:24px;padding-right:24px}
+}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul{list-style:none;padding:0;margin:0}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li{font-size:14px;line-height:26px;width:100%}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:last-child{margin:0}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:last-child a{padding-bottom:20px}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:first-child a{padding-top:17px}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:hover{background:#f2eaf9;outline:1px solid #5e10b1;outline-offset:-1px}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:focus{background:#3c1053}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li:focus a{color:#fff}
+.iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li a{padding:15px 64px 15px 21px;width:100%}
+.iah__login__dropdown .iah__login__dropdown-bottomsection .h3-custom{color:#fff;font-size:26px;line-height:34px;font-family:"RNHouseSansBold",sans-serif;margin:0;font-weight:normal;background:#007ea6;padding:20px}
+.iah__login__dropdown .iah__login__dropdown-bottomsection .text-wrapper{padding:10px 20px 20px 20px;color:#fff;background:#516cb3;font-family:"RNHouseSansRegular",sans-serif;font-size:18px;line-height:26px}
+.iah__login__dropdown .iah__login__dropdown-bottomsection .cta-wrapper{margin-top:20px}
+.iah__login__dropdown .iah__login__dropdown-bottomsection a{color:#fff}
+.iah__login__dropdown .iah__login__dropdown-bottomsection a:hover{text-decoration:none}
+html:not(.firefox) .iah__login__dropdown .iah__login__dropdown-bottomsection a:focus{outline:1px auto #5e10b1 !important}
+.iah__login__dropdown .iah__mobile-logintitle{display:none}
+.iah.iah--adaptive .iah__l1__right .iah__login__dropdown a:focus{float:none;overflow:inherit}
+html:not(.firefox) .iah.iah--adaptive .iah__l1__right .iah__login__dropdown a:focus{outline:1px auto #5e10b1 !important}
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.iah.iah--adaptive .iah__l1__right .iah__login__dropdown a:focus{outline:1px solid #5e10b1 !important}
+}
+.bussiness__login--mobile{visibility:hidden;display:block;float:right;clear:right;padding:0 18px;background:#fff;position:absolute;bottom:0;height:0;z-index:9999;transition-duration:.15s;width:100%}
+.bussiness__login--mobile .iah__login__dropdown{display:block}
+.bussiness__login--mobile .iah__login__dropdown .iah__login__dropdown-topsection{background:transparent;padding:0}
+.bussiness__login--mobile .iah__login__dropdown .iah__login__dropdown-topsection .secondary-cta-wrap>ul li{margin:0}
+.bussiness__login--mobile .iah__login__dropdown .iah__login__dropdown-topsection a{font-size:18px;line-height:48px;text-decoration:none;padding:0;width:100%;background:url("clientlib_ia_global_login_base/resources/images/Chevron.svg") no-repeat right center}
+.bussiness__login--mobile .iah__login__dropdown .iah__login__dropdown-bottomsection{display:none}
+.bussiness__login--mobile .iah__login__dropdown .iah__mobile-logintitle{display:block}
+.bussiness__login--mobile .iah__login__dropdown .iah__mobile-logintitle a{padding:12px 0 10px;font-size:20px;line-height:30px;text-align:center;font-family:"RNHouseSansBold",sans-serif;cursor:pointer;background:url("clientlib_ia_global_login_base/resources/images/Chevron-reversed.svg") no-repeat left center;display:block;text-decoration:none;color:#fff;border-bottom:1px solid rgba(51,51,51,0.4)}
+.iah__l2 .iah__l2__main-links .iah__login__dropdown.active{display:none}
+body .iah.iah--adaptive .iah__l2 ul.ia__nav.ia__navbar-nav__l3>li>a:focus{outline:1px auto #fff !important}
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){body .iah.iah--adaptive .iah__l2 ul.ia__nav.ia__navbar-nav__l3>li>a:focus{outline:1px solid #fff !important}
+}
+body .iah.iah--adaptive a:active{outline:0 solid #ffbf47 !important}
+@media(max-width:1023px){.iah__l2 .iah__l2__main-links .iah__login__dropdown.active{display:block;position:absolute;width:98vw;left:-1vw;top:60px}
+}
+@media(max-width:1023px) and (max-width:1023px) and (min-width:768px){.iah__l2 .iah__l2__main-links .iah__login__dropdown.active{left:-12px}
+}
+@media(max-width:1023px) and (max-width:767px) and (min-width:300px){.iah__l2 .iah__l2__main-links .iah__login__dropdown.active{left:-20px;width:100vw}
+}
+.loginbus .bussiness__login.bussiness__login--mobile{display:none}
+@media(min-width:1024px){body .hide__desktop{display:none !important}
+}
+@media(max-width:1023px){.loginbus .bussiness__login.bussiness__login--mobile{display:block}
+body .hide__mobile{display:none !important}
+}
+.iah a>span{display:block}
+@media(min-width:768px) and (max-width:1023px){.iah .hide_nav_m{display:none !important}
+}
+html:not(.firefox) .main-wrapper .iah--adaptive .iah__l1 .iah__l1__right .iah__login__dropdown-topsection ul li a:focus{outline:1px solid #5e10b1 !important}

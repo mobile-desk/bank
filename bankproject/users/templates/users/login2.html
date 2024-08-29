@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eQ Login</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .eq-header { background-color: #162159; color: white; text-align: center; padding: 10px 0; }
+        .main-content { display: flex; background-color: #dee2e6; padding: 20px; }
+        .left-section { flex: 1; margin-right: 20px; }
+        .right-section { flex: 1; }
+        .card { background-color: white; border-radius: 5px; padding: 20px; margin-bottom: 20px; }
+        .card h2 { color: #162159; }
+        .btn { background-color: #162159; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .status-list { list-style-type: none; padding: 0; }
+        .status-list li { color: skyblue; border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .status-list li::before { content: "•"; color: green; display: inline-block; width: 1em; margin-left: -1em; }
+        footer { background-color: #162159; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #162159;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #162159;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0e1640;
+        }
+          
+    </style>
+</head>
+<body>
+    <header class="eq-header"><h1>eQ</h1></header>
+    
+    <div class="main-content">
+        <div class="left-section">
+            <div class="card">
+                <h2>Log in to eQ</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" required><br>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+                <p>Don't have an account? <a href="{% url 'register_step1' %}">Register</a></p>
+            </div>
+            
+            <div class="card">
+                <h2>Still have questions?</h2>
+                <button class="btn">eQ Support Centre</button>
+                <p>If you require further assistance please contact the eQ Helpdesk:</p>
+                <p>UK and Channel Islands: 0845 800 7274</p>
+                <p>Gibraltar: +350 200 47781</p>
+                <p>International: +44 1534 751900</p>
+            </div>
+            
+            <div class="card">
+                <p><strong>Private Network</strong></p>
+                <p>Unauthorised access and/or misuse of this system may result in civil proceedings and/or criminal prosecution.</p>
+                <img src="{% static 'img/1.png' %}" alt="Private Network Image">
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="card">
+                <h2>eQ system status</h2>
+                <p>Last updated: 28.Aug.2024 - 15:04:32</p>
+                <p>Scheduled downtimes: We perform maintenance every month. To get more information please visit the downtime schedule page. We will also notify you through Communications inside eQ.</p>
+                <ul class="status-list">
+                    <li>eQ Login: available</li>
+                    <li>Multicurrency balances: available</li>
+                    <li>GBP only transactions/balances: available</li>
+                    <li>Payments: available</li>
+                    <li>Payment Authorisation: available</li>
+                    <li>Deposits: available</li>
+                    <li>Foreign exchange: available</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <h1>eQ</h1>
+        <p>Cookie Policy</p>
+    </footer>
+</body>
+</html>
+

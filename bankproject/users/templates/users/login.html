@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eQ Log In - Institutional Banking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .hero {
+            display: flex;
+            background-color: #8d26e9;
+            color: white;
+        }
+        
+        .hero-text {
+            flex: 3;
+            padding: 40px;
+        }
+        
+        .hero-image {
+            flex: 2;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-image: url('path_to_your_image.jpg');
+        }
+        
+        .breadcrumb {
+            background-color: white;
+            padding: 10px 20px;
+        }
+        
+        .login-header {
+            background-color: #420656;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .page-nav {
+            background-color: #d6d8db;
+            padding: 20px;
+        }
+        
+        .eq-info {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .warning-message {
+            background-color: #d6d8db;
+            padding: 20px;
+        }
+        
+        .help-section {
+            background-color: #f5c6cb;
+            padding: 20px;
+        }
+        
+        .purple-heading {
+            color: #420656;
+        }
+        
+        .purple-link {
+            color: #420656;
+            text-decoration: none;
+        }
+        
+        .purple-btn {
+            background-color: #420656;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .site-footer {
+            background-color: #420656;
+            color: white;
+            padding: 40px;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-item i {
+            margin-right: 10px;
+        }
+        
+        .site-footer hr {
+            border: none;
+            border-top: 1px solid white;
+            margin: 20px 0;
+        }
+
+        .top-nav, .main-nav, .hero {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Top navigation bar */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #420656;
+            color: white;
+        }
+
+        .top-nav .brand {
+            font-weight: bold;
+        }
+
+        .top-nav .login-btn {
+            padding: 5px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Second navigation bar */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #683298;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-nav .logo {
+            height: 40px;
+        }
+
+        .main-nav .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-nav .search-bar {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="brand">Institutional Banking</div>
+        <button class="login-btn">Login</button>
+    </nav>
+    
+    <nav class="main-nav">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <div class="menu">
+            <!-- Add menu items here -->
+        </div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+    
+
+    <section class="breadcrumb">
+        <p>Institutional Banking > <a href="#" class="purple-link">eQ Log In</a></p>
+    </section>
+
+    <section class="login-header">
+        <h3>eQ log in and support</h3>
+        <h1>Log in to eQ online banking</h1>
+    </section>
+
+    <section class="page-nav">
+        <p>On this page</p>
+        <a href="#" class="purple-link">Log in to eQ online banking</a>
+    </section>
+
+    <section class="eq-info">
+        <h2 class="purple-heading">eQ online banking</h2>
+        <p>Our multi-currency online banking service for institutional customers.</p>
+        <a href="{% url 'login' %}?step=2" class="purple-btn">Log in to eQ</a>
+
+    </section>
+
+    <section class="warning-message">
+        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h6>Warning Message</h6>
+        <p>Is your bank account held in the UK?</p>
+        <p>If your bank account is held in the UK and you want to log in or sign up to Digital banking then please</p>
+        <a href="#" class="purple-link">visit the RBS website (opens in a new window)</a>
+    </section>
+
+    <section class="help-section">
+        <h2 class="purple-heading">Get help with eQ</h2>
+        <p>Our eQ support centre has FAQs and troubleshooting guides. Alternatively, if you have a technical query (like I'm a system administrator and I'm having trouble logging in) you can contact the eQ Helpdesk:</p>
+        <ul>
+            <li>UK and Channel Islands: 08458 007 274</li>
+            <li>Gibraltar: 00 350 200 47781</li>
+            <li>Overseas: +44 (0)1534 751 900</li>
+        </ul>
+        <p>Lines are open Monday to Friday 8am - 5pm (excluding bank holidays).</p>
+        <p>Calls may be recorded.</p>
+        <button class="purple-btn">Visit eQ Support Center</button>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-item">
+                <i class="fas fa-envelope"></i>
+                <span>Feedback</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-info-circle"></i>
+                <span>Intermediary forms</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-question-circle"></i>
+                <span>eQ Support Centre</span>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy & Cookies Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Sitemap</a>
+            <a href="#">Modern Slavery Act</a>
+        </div>
+    </footer>
+</body>
+</html>

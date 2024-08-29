@@ -1,0 +1,60 @@
+.incident-notification{background-color:#8b3fb2}
+.incident-notification .incident-notification__image-wrapper{max-height:100%}
+.cq-wcm-edit .incident-notification .incident-notification__image-wrapper,.aem-AuthorLayer-Edit .incident-notification .incident-notification__image-wrapper{min-height:212px;min-width:30px;position:relative}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic,.incident-notification .incident-notification__image-wrapper .comp-svg-generic{margin-right:0;position:absolute;top:50%;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);width:110px;height:110px}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap{width:110px;height:110px;text-align:center;padding:calc(110px*0.12)}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap svg,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap svg{width:auto;height:100%}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap svg.wider-flag,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap svg.wider-flag{width:100%;height:100%}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic img,.incident-notification .incident-notification__image-wrapper .comp-svg-generic img{border-radius:8px}
+.incident-notification .vertical-line{display:block;content:' ';position:absolute;width:2px;height:calc(100% - 60px);background:#fff;top:0;right:0;margin-right:37px;margin-top:30px;margin-bottom:30px}
+.incident-notification .incident-notification__content{padding-left:0;padding-top:50px;padding-bottom:30px;position:relative;min-height:212px}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper{margin-bottom:20px;max-height:40px;overflow:hidden;color:#fff}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper .text-comp{color:#fff}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper .title-comp{color:#fff}
+.incident-notification .incident-notification__content .incident-notification__text-wrapper{margin-bottom:20px;max-height:52px;overflow:hidden;color:#fff}
+.incident-notification .incident-notification__content .incident-notification__text-wrapper .text-comp{color:#fff}
+.incident-notification .incident-notification__cta-wrapper{margin-bottom:20px}
+.incident-notification .incident-notification__cta-wrapper .cta{max-height:30px;overflow:hidden;display:inline-block;padding:0;line-height:26px}
+.incident-notification .incident-notification__cta-wrapper .cta:hover span{background-size:0 100%}
+.incident-notification .incident-notification__cta-wrapper .cta:focus span{background-image:none}
+html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta:focus,html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta:focus:hover{outline:1px auto #5e10b1}
+.safari .incident-notification .incident-notification__cta-wrapper .cta:focus,.safari .incident-notification .incident-notification__cta-wrapper .cta:focus:hover{outline-offset:-2px}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-primary .cta-text{background-color:#fff;color:#5e10b1}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-primary:hover .cta-text{color:#3c1053;background-color:rgba(255,255,255,0.85)}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-primary:focus .cta-text{color:#3c1053;outline:2px solid #fff;outline-offset:2px}
+html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-primary:focus{outline:0}
+html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-primary:focus:hover{outline:0}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary,.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small{color:#fff}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary:hover .cta-text,.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small:hover .cta-text{background-size:0 100%}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary .cta-text,.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small .cta-text{width:100%;width:-moz-calc(100%);width:-webkit-calc(100%);width:-o-calc(100%);width:calc(100%);background-image:-webkit-linear-gradient(transparent 95%,#fff 10px,#fff);background-image:-moz-linear-gradient(transparent -moz-calc(100% - 1px),#fff 10px,#fff);background-image:-o-linear-gradient(transparent -o-calc(100% - 1px),#fff 10px,#fff);background-image:linear-gradient(transparent calc(100% - 1px),#fff 10px,#fff);background-repeat:no-repeat;background-size:100% 100%;-webkit-transition:background-size ease-in-out 180ms;-moz-transition:background-size ease-in-out 180ms;-o-transition:background-size ease-in-out 180ms;transition:background-size ease-in-out 180ms;padding-bottom:3px;color:#fff}
+.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary:focus,.incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small:focus{background-image:none}
+html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-secondary:focus,html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small:focus{outline:1px auto #fff}
+html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-secondary:focus:hover,html:not(.firefox) .incident-notification .incident-notification__cta-wrapper .cta.cta-secondary-small:focus:hover{outline:1px auto #fff}
+.incident-notification .incident-notification__close-button{padding-top:45px;text-align:right}
+.incident-notification .incident-notification__close-button .incident-notification__close-icon{display:inline-block;height:19px;width:19px;background-image:url("clientlib_incidentnotification_base/resources/images/icon_close_champ.svg");background-size:19px;cursor:pointer;color:inherit}
+html:not(.firefox) .incident-notification .incident-notification__close-button .incident-notification__close-icon:focus{outline:1px auto #fff}
+.incident-notification .row--eq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}
+.incident-notification .row--eq .eq--col{display:flex;flex-direction:column}
+@media(min-width:1024px) and (max-width:1255px){.incident-notification .incident-notification__image-wrapper .comp-img-generic,.incident-notification .incident-notification__image-wrapper .comp-svg-generic{width:100px;height:100px}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap{width:100px;height:100px;text-align:center;padding:calc(100px*0.12)}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap svg,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap svg{width:auto;height:100%}
+.incident-notification .incident-notification__image-wrapper .comp-img-generic .svg-image-wrap svg.wider-flag,.incident-notification .incident-notification__image-wrapper .comp-svg-generic .svg-image-wrap svg.wider-flag{width:100%;height:100%}
+.incident-notification .vertical-line{margin-right:20px}
+.incident-notification .incident-notification__content{padding-left:0;padding-top:52px;padding-bottom:32px}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper{max-height:36px}
+}
+@media(min-width:768px) and (max-width:1023px){.incident-notification .incident-notification__content{padding-top:40px;padding-bottom:20px;padding-left:0;min-height:184px}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper{max-height:32px}
+.incident-notification .incident-notification__content .incident-notification__text-wrapper{max-height:104px}
+.incident-notification .incident-notification__close-button{padding-top:34px}
+.incident-notification .incident-notification__close-button .incident-notification__close-icon{height:14px;width:14px;background-size:14px}
+}
+@media(max-width:767px){.incident-notification .incident-notification__content{padding-top:30px;padding-bottom:10px;padding-left:0;min-height:180px}
+.incident-notification .incident-notification__content .incident-notification__title-wrapper{margin-bottom:10px;max-height:32px}
+.incident-notification .incident-notification__content .incident-notification__text-wrapper{max-height:104px}
+.incident-notification .incident-notification__close-button{padding-top:23px}
+.incident-notification .incident-notification__close-button .incident-notification__close-icon{height:18px;width:18px;background-size:18px}
+.incident-notification .incident-notification__close-button .incident-notification__close-icon .visually-hidden{overflow:hidden}
+.incident-notification .row--eq .col-xs-offset-1.eq--col{margin-left:8%}
+}
+.aem-AuthorLayer-Edit .emergencybanner section.incident-notification.hidden{display:block !important}

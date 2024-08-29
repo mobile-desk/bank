@@ -1,0 +1,26 @@
+.herobanner .title-wrapper .blueberry em,.herobanner .title-wrapper .peachpie em,.herobanner .title-wrapper .aubergine em,.herobanner .title-wrapper .broccoli em,.herobanner .title-wrapper .tangerine em,.herobanner .title-wrapper .watermelon em,.herobanner .title-wrapper .yolk em,.herobanner .title-wrapper .powderblue em{background-repeat:no-repeat;background-position:bottom;background-size:100% 15%;font-style:normal;text-wrap:nowrap}
+.herobanner .title-wrapper .blueberry em{background-image:url("clientlib_title_base/resources/images/Blueberry.png")}
+.herobanner .title-wrapper .peachpie em{background-image:url("clientlib_title_base/resources/images/Peachpie.png")}
+.herobanner .title-wrapper .aubergine em{background-image:url("clientlib_title_base/resources/images/Aubergine.png")}
+.herobanner .title-wrapper .broccoli em{background-image:url("clientlib_title_base/resources/images/Broccoli.png")}
+.herobanner .title-wrapper .tangerine em{background-image:url("clientlib_title_base/resources/images/Tangerine.png")}
+.herobanner .title-wrapper .watermelon em{background-image:url("clientlib_title_base/resources/images/Watermelon.png")}
+.herobanner .title-wrapper .powderblue em{background-image:url("clientlib_title_base/resources/images/Powderblue.png")}
+.herobanner .title-wrapper .yolk em{background-image:url("clientlib_title_base/resources/images/Yolk.png")}
+.herobanner .title-wrapper .default em{border-bottom:0 solid transparent}
+.herobanner .title-wrapper .remove em{font-style:normal;text-wrap:nowrap}
+.herobanner .title-wrapper .highlight_blueberry em,.herobanner .title-wrapper .highlight_aubergine em,.herobanner .title-wrapper .highlight_broccoli em,.herobanner .title-wrapper .highlight_tangerine em,.herobanner .title-wrapper .highlight_watermelon em,.herobanner .title-wrapper .highlight_yolk em,.herobanner .title-wrapper .highlight_pineapple em{margin:0 -10px;background-size:100% 100%;background-repeat:no-repeat;padding:0 10px 0 10px;font-style:normal;text-wrap:nowrap}
+.herobanner .title-wrapper .highlight_pineapple,.herobanner .title-wrapper .highlight_yolk,.herobanner .title-wrapper .highlight_broccoli{color:#5a287d}
+.herobanner .title-wrapper .highlight_tangerine,.herobanner .title-wrapper .highlight_watermelon,.herobanner .title-wrapper .highlight_aubergine,.herobanner .title-wrapper .highlight_blueberry{color:#fff}
+.herobanner .title-wrapper .highlight_blueberry em{background-image:url("clientlib_title_base/resources/images/Blueberry1.png")}
+.herobanner .title-wrapper .highlight_pineapple em{background-image:url("clientlib_title_base/resources/images/Pineapple1.png")}
+.herobanner .title-wrapper .highlight_aubergine em{background-image:url("clientlib_title_base/resources/images/Aubergine1.png")}
+.herobanner .title-wrapper .highlight_broccoli em{background-image:url("clientlib_title_base/resources/images/Broccoli1.png")}
+.herobanner .title-wrapper .highlight_tangerine em{background-image:url("clientlib_title_base/resources/images/Tangerine1.png")}
+.herobanner .title-wrapper .highlight_watermelon em{background-image:url("clientlib_title_base/resources/images/Watermelon1.png")}
+.herobanner .title-wrapper .highlight_yolk em{background-image:url("clientlib_title_base/resources/images/Yolk1.png")}
+.herobanner .title-wrapper .highlight_default em{border-bottom:0 solid transparent}
+@media(min-width:768px) and (max-width:1023px){.herobanner .title-wrapper .highlight_blueberry em,.herobanner .title-wrapper .highlight_aubergine em,.herobanner .title-wrapper .highlight_broccoli em,.herobanner .title-wrapper .highlight_tangerine em,.herobanner .title-wrapper .highlight_watermelon em,.herobanner .title-wrapper .highlight_yolk em,.herobanner .title-wrapper .highlight_pineapple em{margin:0 -8px;padding:0 8px 0 8px}
+}
+@media(max-width:767px){.herobanner .title-wrapper .highlight_blueberry em,.herobanner .title-wrapper .highlight_aubergine em,.herobanner .title-wrapper .highlight_broccoli em,.herobanner .title-wrapper .highlight_tangerine em,.herobanner .title-wrapper .highlight_watermelon em,.herobanner .title-wrapper .highlight_yolk em,.herobanner .title-wrapper .highlight_pineapple em{margin:0 -6px;padding:0 8px 0 8px}
+}

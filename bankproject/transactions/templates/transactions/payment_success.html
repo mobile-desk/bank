@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .receipt {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .receipt-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .receipt-details {
+            margin-bottom: 20px;
+        }
+        .receipt-footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <div class="receipt-header">
+            <h1>Transaction Receipt</h1>
+            <p>Receipt ID: {{ receipt.id }}</p>
+        </div>
+        <div class="receipt-details">
+            <p><strong>Sender:</strong> {{ receipt.sender_name }}</p>
+            <p><strong>Amount:</strong> {{ receipt.amount }}</p>
+            <p><strong>Recipient:</strong> {{ receipt.recipient_details }}</p>
+            <p><strong>Date & Time:</strong> {{ receipt.date_time }}</p>
+            <p><strong>Description:</strong> {{ receipt.description }}</p>
+        </div>
+        <div class="receipt-footer">
+            <p>Thank you for using our services.</p>
+        </div>
+    </div>
+</body>
+</html>
+

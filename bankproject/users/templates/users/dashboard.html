@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking - Account Summary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-menu {
+            background-color: #162159;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: white;
+        }
+        .logout-btn {
+            background-color: #FF1493;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            
+            padding: 20px;
+        }
+        .sidebar h2 {
+            color: #162159;
+        }
+        .sidebar-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-menu li a {
+            color: #FF1493;
+            text-decoration: none;
+            
+        }
+        .sidebar-menu li {
+            padding-bottom: 10px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .account-card {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .account-card-header {
+            background-color: #162159;
+            color: white;
+            padding: 10px;
+        }
+        .account-card-body {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .account-card-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .account-card-footer a {
+            color: #FF1493;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .savings-goal-card {
+            background-color: #162159;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+        .quick-transfer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .form-select, .form-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-button {
+            background-color: #1c7430;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form-button:hover {
+            background-color: #34ce57;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .products-sidebar {
+            width: 200px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .product-list li::before {
+            content: "➔";
+            color: #FF1493;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .products-sidebar {
+                width: 100%;
+                order: 1;
+            }
+            
+            .main-content {
+                order: 0;
+            }
+        }
+
+        .tiny-icon {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+
+        .account-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .account-icon {
+            width: 100px;
+            height: 100px;
+            margin-right: -40px; /* Reduced margin to bring them closer */
+        }
+        
+        .balance-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .fa-info-circle {
+            font-size: 25px;
+            color: #FF1493;
+            margin-right: 10px;
+        }
+        
+        .balance-amount {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main-menu">
+        <div class="logo">Logo</div>
+        <button class="logout-btn"><a href="{% url 'authenticating:logout' %}">Logout</a></button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Digital Banking</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#">Account Summary</a></li>
+                <li><a href="{% url 'transactions:pat' %}">Payments and Transfer</a></li>
+                <li><a href="#">Statements</a></li>
+                <li><a href="#">Mailbox</a></li>
+                <li><a href="#">Paperless Settings</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Your Details</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+            
+            
+            <form method="post" class="quick-transfer-form">
+                {% csrf_token %}
+                <select name="from_account" class="form-select">
+                    {% for account in accounts %}
+                        <option value="{{ account.id }}">{{ account.account_number }} - {{ account.account_type }}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" name="to_account" placeholder="Enter account number" class="form-input">
+                <input type="number" name="amount" step="0.01" min="0" placeholder="Enter amount" class="form-input">
+                <button type="submit" class="form-button">Transfer</button>
+            </form>
+
+
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+
+
+
+        </div>
+        <div class="main-content">
+            <h1 style="color: #162159;">Account Summary</h1>
+            <p>Customer number: {{ user.username }}</p>
+            <p>Last login: <!-- Fetch last login time --></p>
+            <h3 style="color: #162159;">Personal Accounts</h3>
+            <!-- Loop through user's accounts -->
+            {% for account in user.account_set.all %}
+            <div class="account-card">
+                
+                <div class="account-card-body">
+                    <div>
+                       
+                        <div class="account-info">
+                            <img src="{% static 'img/logo.svg' %}" alt="Account" class="account-icon">
+                            <h3>A/C: {{ account.account_number }}</h3>
+                        </div>
+
+                        <p>Account Type: {{ account.account_type }}</p>
+                    </div>
+                    <div class="balance-info">
+                        <i class="fas fa-info-circle fa-5x"></i>
+                        <span class="balance-amount">€ {{ account.balance }}</span>
+                    </div>
+                    
+                </div>
+                <div class="account-card-footer">
+                    <a href="{% url 'transactions:make_payment' %}" style="color: #FF1493;">Make a Payment</a>
+                    <a href="#" style="color: #FF1493;">View Account Details</a>
+                    <a href="#" style="color: #FF1493;">View Transactions</a>
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+
+            <div class="savings-goal-card">
+                <h3>Saving Goals</h3>
+                <p>Want to save for that special something? Why not let us help you with our Savings Goal tool which has been rated 5 star by the FairBanking Foundation</p>
+                <button class="form-button">Find Out More</button>
+            </div>
+        </div>
+
+        <div class="products-sidebar">
+            <h3 style="color: #162159;">Our Products</h3>
+            <h5 style="color: #162159;">Personal Products</h5>
+            <ul class="product-list">
+                <li>Savings accounts</li>
+                <li>Cash ISAs</li>
+                <li>Current accounts</li>
+                <li>Upgrade your account</li>
+                <li>Credit cards</li>
+                <li>Overdrafts</li>
+                <li>Loans</li>
+                <li>Mortgages</li>
+                <li>Insurance</li>
+                <li>Travel money</li>
+                <li>Investment products</li>
+                <li>Mobile app</li>
+                <li>What's new</li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
+

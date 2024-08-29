@@ -1,0 +1,486 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>site</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .top-nav, .main-nav, .hero {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            /* Top navigation bar */
+            .top-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #420656;
+                color: white;
+            }
+
+            .top-nav .brand {
+                font-weight: bold;
+            }
+
+            .top-nav .login-btn {
+                padding: 5px 15px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            /* Second navigation bar */
+            .main-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                background-color: #683298;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .main-nav .logo {
+                height: 40px;
+            }
+
+            .main-nav .menu {
+                display: flex;
+                gap: 20px;
+            }
+
+            .main-nav .search-bar {
+                padding: 5px 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            /* Hero section */
+            .hero {
+                display: flex;
+                padding-bottom: 20px;
+                background-color: #683298;
+                color: white;
+            }
+
+            .hero-text {
+                flex: 2;
+                padding: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+
+            .hero-image {
+                flex: 2;
+                background-size: cover;
+                background-position: top center;
+                background-repeat: no-repeat;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            
+        
+            .features {
+                background-color: #d6d8db;
+                padding: 40px 0;
+                text-align: center;
+            }
+            
+            .feature-icons {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+            
+            .feature-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature-item img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .search-section h2 {
+                margin-bottom: 20px;
+            }
+            
+            .search-section input {
+                padding: 10px;
+                width: 300px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            
+            .feature-item i {
+                font-size: 3rem;  /* Adjust this value to make icons larger or smaller */
+                margin-bottom: 10px;
+                color: #420656;  /* This matches the top nav color, adjust as needed */
+            }
+            
+            .info-section {
+                background-color: #fbfcfc;
+                padding: 60px 60px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .info-content {
+                flex: 1;
+                padding-right: 40px;
+            }
+            
+            .info-content h2 {
+                color: #420656;
+                margin-bottom: 20px;
+            }
+            
+            .purple-btn {
+                background-color: #420656;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            
+            .info-image {
+                flex: 1;
+            }
+            
+            .info-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 20px;  /* Adjust this value to increase or decrease the curve */
+            }
+            
+            
+            .card-section {
+                background-color: #fbfcfc;
+                padding: 60px 40px;
+                text-align: center;
+            }
+            
+            .card-section h2 {
+                color: #420656;
+                margin-bottom: 20px;
+            }
+            
+            .card-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+            
+            .card {
+                flex: 1;
+                margin: 0 15px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                overflow: hidden;
+            }
+            
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            
+            .card h3 {
+                color: #420656;
+                margin: 20px 0 10px;
+            }
+            
+            .card h5 {
+                color: #333;
+                margin-bottom: 10px;
+            }
+            
+            .card p {
+                padding: 0 20px;
+                margin-bottom: 20px;
+            }
+            
+            .card a {
+                color: #420656;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            
+          
+            .split-section {
+                background-color: #dee2e6;
+                padding: 60px 40px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .split-content {
+                flex: 1;
+                padding-right: 40px;
+            }
+            
+            .split-content h2 {
+                color: #420656;
+                margin-bottom: 20px;
+            }
+            
+            .tick-list {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            .tick-list li:before {
+                content: '✓';
+                color: #420656;
+                margin-right: 10px;
+            }
+            
+            .purple-link {
+                color: #420656;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .split-image {
+                flex: 1;
+            }
+            
+            .split-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 20px;
+            }
+            
+            .site-footer {
+                background-color: #420656;
+                color: white;
+                padding: 40px;
+            }
+            
+            .footer-top {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 20px;
+            }
+            
+            .footer-item {
+                display: flex;
+                align-items: center;
+            }
+            
+            .footer-item i {
+                margin-right: 10px;
+            }
+            
+            .site-footer hr {
+                border: none;
+                border-top: 1px solid white;
+                margin: 20px 0;
+            }
+            
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+            
+            .footer-links a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+                  
+
+        </style>
+    </head>
+    <body>
+        <nav class="top-nav">
+            <div class="brand">Institutional Banking</div>
+            <button class="login-btn" onclick="window.location.href='{% url 'login' %}'">Login</button>
+
+        </nav>
+        
+        <nav class="main-nav">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+            <div class="menu">
+                <!-- Add menu items here -->
+            </div>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </nav>
+        
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Whatever your goals, let's get going</h1>
+                <p>Proud partner of Team GB</p>
+            </div>
+            <div class="hero-image" style="background-image: url('{% static 'img/1.jpg' %}');"></div>
+        </section>
+
+        <section class="features">
+            <div class="feature-icons">
+                <div class="feature-item">
+                    <i class="fas fa-briefcase"></i>
+                    <p>Learn about our <br>specialist sectors</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sign"></i>
+                    <p>See where our <br>teams are based</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Read latest insights <br>and analysis</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-alt"></i>
+                    <p>Make a change to <br>your account</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-desktop"></i>
+                    <p>Log in to eQ <br>Online Banking</p>
+                </div>
+            </div>
+            <div class="search-section">
+                <h2>Search our site</h2>
+                <input type="text" placeholder="Search...">
+            </div>
+        </section>
+        
+        <section class="info-section">
+            <div class="info-content">
+                <h2>ESG report: adopting science-based targets</h2>
+                <p>
+                    Has economic uncertainty slowed progress towards net zero?<br>
+                    We looked at the views of 125 influencers in alternative investment funds (AIFs) to see progress made in adopting science-based targets (SBTs) given worsening economic conditions.<br>
+                    Our latest research reveals that the urgency among AIFs to adopt SBTs has dimmed since last year. But their long-term commitment to net zero is unchanged. 
+                </p>
+                <button class="purple-btn">Learn More</button>
+            </div>
+            <div class="info-image">
+                <img src="{% static 'img/2.jpg' %}" alt="Financial Partner">
+            </div>
+
+
+
+        
+        </section>
+
+
+
+        <section class="card-section">
+            <h2>We make banking easy</h2>
+            <p>
+                We help institutional clients look after their money and manage risk. From day-to-day banking, to meeting your borrowing needs, to keeping your assets safe. Whether you’re an alternative investment fund manager, asset manager, fund administrator or corporate service provider, we make banking easy.
+            </p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="{% static 'img/svc1.jpg' %}" alt="Service 1">
+                    <h3>What we do</h3>
+                    <h5>Accounts and solutions for running your business</h5>
+                    <p>
+                        From transactional banking to fund financing to depositary services – all through one point of contact. And our multi-currency online banking platform, eQ, lets you move and manage your money the same way you would with personal banking.
+                    </p>
+                    <a href="#">Our solutions</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/svc2.jpg' %}" alt="Service 2">
+                    <h3>Constantly Innovating</h3>
+                    <h5>Making banking easy for you, now and in the future</h5>
+                    <p>
+                        We constantly think about what more we can do for your business now, and in the future. We'll act as a financial sounding board and bring you strategic ideas to help manage your money and protect your investors. 
+                    </p>
+                    <a href="#">More about who we are</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/svc3.jpg' %}" alt="Service 3">
+                    <h3>Our Locations</h3>
+                    <h5>Offering specific expertise for your location</h5>
+                    <p>
+                        With offices located in Jersey, Guernsey, London, Luxembourg, the Isle of Man and Gibraltar, we can deliver all the services you need, where and when you need them. 
+                    </p>
+                    <a href="#">Our office locations</a>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="split-section">
+            <div class="split-content">
+                <h2>A trusted partner for your business</h2>
+                <p>
+                    We have specific sector knowledge and tailor solutions to your requirements by selecting and adapting our service offering which includes:
+                </p>
+                <ul class="tick-list">
+                    <li>Cash management and core transactional banking</li>
+                    <li>Fund finance solutions, including subscription credit lines and asset-backed facilities</li>
+                    <li>Liquidity and risk management including foreign exchange and interest rate risk solutions</li>
+                    <li>Depositary services</li>
+                </ul>
+                <p>
+                    Our proactive, consultative approach is underpinned by the expertise of over 200 dedicated professionals so you’ll get personal support from a local expert.
+                </p>
+                <a href="#" class="purple-link">More about our sector expertise</a>
+                <p>Security may be required. Product fees may apply. Specific eligibility criteria apply. </p>
+            </div>
+            <div class="split-image">
+                <img src="{% static 'img/3.jpg' %}" alt="Our Commitment">
+            </div>
+        </section>
+        
+
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Feedback</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Intermediary forms</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>eQ Support Centre</span>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy & Cookies Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Sitemap</a>
+                <a href="#">Modern Slavery Act</a>
+            </div>
+        </footer>
+        
+
+
+    </body>
+</html>

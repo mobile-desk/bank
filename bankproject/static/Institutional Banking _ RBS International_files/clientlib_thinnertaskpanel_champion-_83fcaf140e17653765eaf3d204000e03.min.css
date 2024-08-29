@@ -1,0 +1,127 @@
+.thinnertaskpanel{position:relative;margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content{padding-top:50px;background:#f2eaf9}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list{padding-bottom:50px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list.thinnertaskpanel__list--rbs{background-color:#f5f5f5;padding-bottom:14px;padding-top:15px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item{padding-top:0;position:relative}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap{margin:auto;width:139px;height:139px;position:absolute;top:0;right:0;left:0}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .svg-image-wrap{width:139px;height:139px;text-align:center;padding:calc(139px*0.12);overflow:hidden}
+.aem-AuthorLayer-Edit .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap{position:relative;z-index:9999}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-img-generic,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-svg-generic,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .svg-image-wrap,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap svg{width:auto;height:100%;overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-img-generic a,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-svg-generic a,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .svg-image-wrap a,.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap svg a{width:100%;height:100%}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap svg.wider-flag{width:100%;height:100%}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-img-generic img{border-radius:8px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap{text-align:center}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .auth--info{margin-top:25px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary{color:#5e10b1;padding-top:165px;display:block}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary:hover .cta-text{background-size:0 100%}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary .cta-text{width:100%;width:-moz-calc(100%);width:-webkit-calc(100%);width:-o-calc(100%);width:calc(100%);background-image:-webkit-linear-gradient(transparent 95%,#5e10b1 10px,#5e10b1);background-image:-moz-linear-gradient(transparent -moz-calc(100% - 1px),#5e10b1 10px,#5e10b1);background-image:-o-linear-gradient(transparent -o-calc(100% - 1px),#5e10b1 10px,#5e10b1);background-image:linear-gradient(transparent calc(100% - 1px),#5e10b1 10px,#5e10b1);background-repeat:no-repeat;background-size:100% 100%;-webkit-transition:background-size ease-in-out 180ms;-moz-transition:background-size ease-in-out 180ms;-o-transition:background-size ease-in-out 180ms;transition:background-size ease-in-out 180ms;padding-bottom:3px;color:#5e10b1}
+@media(prefers-reduced-motion:reduce){.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary .cta-text{transition:none}
+}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary:focus{background-image:none}
+html:not(.firefox) .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary:focus{outline:1px auto #5e10b1}
+html:not(.firefox) .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary:focus:hover{outline:1px auto #5e10b1}
+.aem-AuthorLayer-Edit .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary{margin-top:0;padding-top:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap{padding-bottom:50px;background:transparent}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap form{margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{float:left;margin-bottom:0;height:80px;overflow:hidden;width:calc(100% - 450px);margin-right:20px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{display:table-cell;vertical-align:middle;height:80px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{width:430px;float:left;background-color:#fff;padding:20px 20px 20px 20px;position:relative;border-radius:8px;border:1px solid #646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.focus{border:1px solid #5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.focus:after{opacity:1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.textenter .thinnertaskpanel__search-text{opacity:1;filter:alpha(opacity=80);max-width:77px;margin-left:10px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap .thinnertaskpanel__searching-text{font-size:22px;line-height:36px;display:none;font-family:"RNHouseSansRegular",sans-serif;color:#5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__search__btn{display:none}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__searching-text{float:right;position:relative}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__searching-text:after{content:"";position:absolute;bottom:4px;left:0;width:0;-webkit-transition:width .5s ease-out;transition:width .5s ease-out;border-bottom:1px solid #5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__searching-text.clicked::after{width:100%}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{border:0;padding:0;font-size:18px;line-height:26px;height:36px;color:#333;background-color:#fff;width:calc(100% - 156px)}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input::-ms-clear{display:none}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input::-webkit-input-placeholder{color:#646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input::-moz-placeholder{color:#646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input:-ms-input-placeholder{color:#646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input:-moz-placeholder{color:#646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input:focus{outline:0;color:#646068}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{float:right;background-color:#fff;border:0;height:33px;padding:0;margin:2px 0 1px;padding-left:1px;overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn:focus{outline:1px auto #5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon:before{content:"";display:inline-block;background:url("clientlib_thinnertaskpanel_base/resources/images/search-icon-champion.svg") no-repeat top 4px center;width:24px;height:28px}
+.mac.safari .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon:before,.mac.chrome .thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon:before{font-size:31px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-text{font-size:22px;line-height:36px;vertical-align:top;opacity:0;filter:alpha(opacity=0);max-width:0;font-family:"RNHouseSansRegular",sans-serif;display:inline-block;position:relative;text-decoration:none;-webkit-transition:max-width 1s ease-out,opacity .5s ease-out;-moz-transition:max-width 1s ease-out,opacity .5s ease-out;-ms-transition:max-width 1s ease-out,opacity .5s ease-out;transition:max-width 1s ease-out,opacity .5s ease-out;color:#5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-text:after{content:"";position:absolute;bottom:4px;left:0;width:0;-webkit-transition:width .5s ease-out;transition:width .5s ease-out;border-bottom:1px solid #5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn:hover .thinnertaskpanel__search-text:after{width:100%}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs{position:relative;top:0;width:100%;height:auto;padding-top:0;background:#f5f5f5}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap{padding-bottom:35px;background-color:#f5f5f5}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{float:none;width:100%;padding-top:15px;margin-right:0;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:76px;height:auto;color:#5a287d;display:block;overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{width:100%;float:none;border:0;background:#f5f5f5;padding:10px 0 12px;border-bottom:4px solid #5e10b1}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap::after{display:none}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.focus{border-bottom:4px solid #5a287d}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{font-size:22px;line-height:36px;color:#646068;background-color:#f5f5f5}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{margin:0 0 3px;background-color:#f5f5f5}
+@media(min-width:1024px) and (max-width:1255px){.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap{width:107px;height:107px;position:absolute;top:0;right:0;left:0;margin:auto}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .comp-svg-generic .svg-image-wrap{width:107px;height:107px;text-align:center;padding:calc(107px*0.12);overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary{padding-top:133px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{margin:2px 0 1px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{height:72px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{height:72px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{padding-top:16px;margin-right:0;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:70px;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{margin:1px 0 2px}
+}
+@media(min-width:768px) and (max-width:1023px){.thinnertaskpanel{margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content{padding-top:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list{padding-bottom:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list.thinnertaskpanel__list--6 .row .thinnertaskpanel__list--tab-view .thinnertaskpanel__list--medium{width:16.66667%;padding-left:6px;padding-right:6px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .row{text-align:center}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .row .thinnertaskpanel__list--tab-view{display:inline-block}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .row .thinnertaskpanel__list--tab-view .thinnertaskpanel__list--medium{width:134px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap{margin:auto;width:78px;height:78px;position:absolute;top:0;right:0;left:0}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .comp-svg-generic .svg-image-wrap{width:78px;height:78px;text-align:center;padding:calc(78px*0.12);overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta-secondary{padding-top:104px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap{padding-bottom:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{text-align:center;float:none;width:100%;margin-right:0;margin-bottom:15px;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:64px;height:auto;display:block;overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{width:430px;float:none;padding:12px 20px 12px 20px;margin:0 auto}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap .thinnertaskpanel__searching-text{font-size:18px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{width:calc(100% - 131px);font-size:18px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{height:36px;margin:0}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-text{font-size:18px;line-height:36px;margin-top:2px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before{font-size:27px;line-height:27px;margin:4px 0 5px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap{padding-bottom:30px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{text-align:left;padding-top:15px;margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:64px;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{padding:10px 0 10px;margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{font-size:18px;line-height:28px;margin-top:5px;height:28px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{height:33px;margin:0}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before{font-size:33px;line-height:34px;margin:0}
+}
+@media(max-width:767px){.thinnertaskpanel{margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content{padding-top:20px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list{padding-bottom:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item{padding-top:10px;position:relative}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap{margin:0;float:left;width:64px;margin-right:15px;height:64px;position:absolute;left:0;right:0;top:10px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__imgWrap .comp-svg-generic .svg-image-wrap{width:64px;height:64px;text-align:center;padding:calc(64px*0.12);overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap{margin:0;padding:0;width:100%;text-align:left;height:64px;overflow:hidden}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__list .thinnertaskpanel__list__item .thinnertaskpanel__list__item__ctaWrap .cta.cta-secondary{display:table-cell;vertical-align:middle;height:64px;padding:0;padding-left:79px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap{padding-bottom:30px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{text-align:center;float:none;width:100%;margin-right:0;margin-bottom:10px;height:auto}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:64px;height:auto;display:block}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{width:100%;float:none;padding:17px 20px 17px 20px;margin:0 auto}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__search__btn{display:inline-block}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__searching-text{display:none}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{font-size:18px;line-height:26px;width:calc(100% - 47px)}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{width:27px;height:27px;margin:5px 0 4px}
+.thinnertaskpanel .thinnertaskpanel__content .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before{background:url("clientlib_thinnertaskpanel_base/resources/images/search-icon-champion.svg") no-repeat top 2px center}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs{background-color:#f5f5f5;padding-top:15px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap{padding-bottom:20px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label{text-align:left;padding-top:11px;height:auto;margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__label .title-comp{max-height:64px;height:auto;display:block}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap{padding:10px 0 10px;margin-bottom:0}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__search__btn{display:inline-block}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input-wrap.searching .thinnertaskpanel__searching-text{display:none}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__input{font-size:18px;line-height:36px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{width:30px;height:30px;margin:3px 0}
+.mac.safari .thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn,.mac.chrome .thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn,.iphone .thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn{width:31px;height:31px}
+.thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before{font-size:30px;line-height:30px}
+.mac.safari .thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before,.mac.chrome .thinnertaskpanel .thinnertaskpanel__content.thinnertaskpanel__content--rbs .thinnertaskpanel__searchwrap .thinnertaskpanel__search__btn .thinnertaskpanel__search-icon::before{line-height:32px}
+}
+.cq-wcm-edit .thinnertaskpanel__list__item__imgWrap,.aem-AuthorLayer-Edit .thinnertaskpanel__list__item__imgWrap{z-index:1}

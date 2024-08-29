@@ -1,0 +1,81 @@
+.notification-section{background:0;background-color:#8b3fb2}
+.notification-section.animateShow .image-wrapper{height:100%}
+.notification-section.animateShow .image-wrapper .comp-img-generic{margin-right:0;position:absolute;top:50%;width:110px;height:110px;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%)}
+.notification-section.animateShow .image-wrapper .verticalline{display:block;content:' ';position:absolute;width:2px;height:calc(100% - 60px);background:#fff;top:0;right:0;margin-right:37px;margin-top:30px;margin-bottom:30px}
+.notification-section .slick-dots-nav{position:relative}
+.notification-section .image-wrapper .comp-img-generic img{max-width:110px;max-height:110px;border-radius:8px}
+.cq-wcm-edit .notification-section .image-wrapper,.aem-AuthorLayer-Edit .notification-section .image-wrapper{min-height:212px;min-width:30px;position:relative}
+.notification-section .notifications-wrap{padding-left:0;padding-top:50px;padding-bottom:50px;position:relative}
+.notification-section .notifications-wrap .col-cust-6{width:70.5%}
+.notification-section .notifications-wrap .col-cust-6 .titleWrapper{margin-bottom:20px;max-height:40px;overflow:hidden}
+.notification-section .notifications-wrap .col-cust-6 .titleWrapper h1,.notification-section .notifications-wrap .col-cust-6 .titleWrapper h2,.notification-section .notifications-wrap .col-cust-6 .titleWrapper .h2,.notification-section .notifications-wrap .col-cust-6 .titleWrapper .h2-custom,.notification-section .notifications-wrap .col-cust-6 .titleWrapper h3,.notification-section .notifications-wrap .col-cust-6 .titleWrapper .h3,.notification-section .notifications-wrap .col-cust-6 .titleWrapper .h3-custom,.notification-section .notifications-wrap .col-cust-6 .titleWrapper h4,.notification-section .notifications-wrap .col-cust-6 .titleWrapper .h4,.notification-section .notifications-wrap .col-cust-6 .titleWrapper h5,.notification-section .notifications-wrap .col-cust-6 .titleWrapper h6{color:#fff}
+.notification-section .notifications-wrap .col-cust-5{width:70.5%}
+.notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap{margin-top:20px}
+.notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary{display:inline-block;color:#fff;padding:0;line-height:26px;max-height:30px;overflow:hidden;text-decoration:none}
+.mac .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary,.ipad .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary{padding-bottom:4px}
+.notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:hover span{background-size:0 100%;border:0}
+.mac .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:hover span{background-size:-1px 100%}
+.notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:focus span{background-image:none}
+html:not(.firefox) .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:focus,html:not(.firefox) .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:focus:hover{outline:1px auto #fff}
+.safari .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:focus,.safari .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary:focus:hover{outline-offset:-2px}
+.notification-section .notifications-wrap .textWrapper{max-height:52px;overflow:hidden}
+.notification-section .notifications-wrap .textWrapper .text-comp{color:#fff}
+.notification-section .closeBtn{padding-top:45px}
+.notification-section .closeBtn .closeIcon{display:inline-block;height:19px;width:19px;background-image:url("clientlib_notification_base/resources/images/champ-close.svg");background-size:19px}
+html:not(.firefox) .notification-section .closeBtn .closeIcon:focus{outline:1px auto #fff}
+.notification-section .notificationSlider.slick-slider{margin-bottom:0}
+.notification-section .notificationSlider.slick-slider .slick-arrow{z-index:99;height:20px;width:11px;top:50%}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-prev{left:0;background-image:url("clientlib_notification_base/resources/images/champ-left.svg");background-repeat:no-repeat;background-size:11px;margin-left:11px}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-prev.slick-disabled{background-image:url("clientlib_notification_base/resources/images/icon-arrow-left-disabled.png");cursor:auto}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-prev:focus,.notification-section .notificationSlider.slick-slider .slick-arrow.slick-prev:focus:hover{outline:1px auto #fff}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-next{right:0;background-image:url("clientlib_notification_base/resources/images/champ-right.svg");background-repeat:no-repeat;background-size:12px;margin-right:11px}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-next.slick-disabled{background-image:url("clientlib_notification_base/resources/images/icon-arrow-right-disabled.png");cursor:auto}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-next:focus,.notification-section .notificationSlider.slick-slider .slick-arrow.slick-next:focus:hover{outline:1px auto #fff}
+.notification-section .notificationSlider.slick-slider .slick-arrow:before{content:none}
+.notification-section.animateNoti{visibility:hidden}
+.notification-section.animateNoti.animateBefore{width:10%;height:20px;margin:0 auto;overflow:hidden}
+.notification-section.animateNoti.animateBefore.animateShow{visibility:visible}
+.notification-section .slick-dots{bottom:0;margin-bottom:20px;top:auto}
+.notification-section .slick-dots li{width:10px;height:10px}
+.notification-section .slick-dots li button{border:1px solid #fff;width:8px;height:8px;padding:4px;border-radius:4px}
+.notification-section .slick-dots li button:before{width:10px;height:10px;content:none;opacity:1}
+.notification-section .slick-dots li button:focus,.notification-section .slick-dots li button:focus:hover{outline:1px auto #5a287d}
+.notification-section .slick-dots li.slick-active button{background-color:#fff}
+.notification-section .row-eq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}
+.notification-section .row-eq .eq-col{display:flex;flex-direction:column}
+.notification-section.complete .row-eq{height:100%}
+.notification-section .slide-item{height:auto;outline:0;background:#8b3fb2}
+@media(min-width:1024px) and (max-width:1255px){.notification-section.animateShow .image-wrapper .comp-img-generic img{max-width:100px;max-height:100px}
+.notification-section.animateShow .image-wrapper .verticalline{margin-right:20px}
+.notification-section .notifications-wrap{padding-left:0;padding-top:52px;padding-bottom:52px}
+.notification-section .notifications-wrap .col-cust-6{width:85%}
+.notification-section .notifications-wrap .col-cust-6 .titleWrapper{max-height:36px}
+.notification-section .notifications-wrap .col-cust-5{width:70.2%}
+.notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap{margin-bottom:0}
+.notification-section .closeBtn{padding-top:45px}
+}
+@media(min-width:768px) and (max-width:1023px){.notification-section .notifications-wrap{padding-top:40px;padding-bottom:40px;padding-left:0}
+.notification-section .notifications-wrap .col-cust-6{width:76.8%}
+.notification-section .notifications-wrap .col-cust-6 .titleWrapper{max-height:32px}
+.notification-section .notifications-wrap .col-cust-5{width:76.8%}
+.notification-section .notifications-wrap .textWrapper{max-height:104px}
+.notification-section .closeBtn{padding-top:34px}
+.notification-section .closeBtn .closeIcon{height:14px;width:14px;background-size:14px}
+.notification-section .slick-slider .notifications-wrap{padding-bottom:50px}
+.notification-section .slick-dots{bottom:-10px}
+}
+@media(max-width:767px){.notification-section .notifications-wrap{padding-top:30px;padding-bottom:30px;padding-left:0}
+.notification-section .notifications-wrap .col-cust-6{width:89%}
+.notification-section .notifications-wrap .col-cust-6 .titleWrapper{margin-bottom:10px;max-height:32px}
+.notification-section .notifications-wrap .col-cust-5{width:89%}
+.iphone .notification-section .notifications-wrap .col-cust-5 .secondary-cta-wrap .cta-secondary .cta-text{padding-bottom:2px}
+.notification-section .notifications-wrap .textWrapper{max-height:104px}
+.notification-section .closeBtn{padding-top:23px;position:relative}
+.notification-section .closeBtn .closeIcon{height:13px;width:13px;background-size:13px;right:0}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-prev{background-size:11px}
+.notification-section .notificationSlider.slick-slider .slick-arrow.slick-next{background-size:12px}
+.notification-section .notificationSlider.slick-slider .notifications-wrap{padding-bottom:50px}
+.notification-section .row-eq .col-xs-offset-1.eq-col{margin-left:8%}
+.notification-section .slick-dots{bottom:-20px}
+}
+.cq-wcm-edit .notification-section.bgPurple h3,.cq-wcm-edit .notification-section.bgPurple .h3-custom,.aem-AuthorLayer-Edit .notification-section.bgPurple h3,.aem-AuthorLayer-Edit .notification-section.bgPurple .h3-custom{color:#fff}

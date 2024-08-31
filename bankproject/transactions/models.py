@@ -52,3 +52,18 @@ class Receipt(models.Model):
         return f"{self.recipient.user.first_name} {self.recipient.user.last_name} - {self.recipient.account_number}"
 
 
+
+class PendingTransaction(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    from_account_id = models.IntegerField()
+    to_account_id = models.IntegerField()
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    pay_now = models.BooleanField()
+    payment_date = models.DateTimeField(null=True, blank=True)
+    save_beneficiary = models.BooleanField()
+    beneficiary_name = models.CharField(max_length=255, blank=True)
+    receipt_id = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Pending Transaction for {self.user.username}"

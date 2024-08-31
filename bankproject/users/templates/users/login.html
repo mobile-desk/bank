@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eQ Log In - Institutional Banking</title>
+    <title>RBS - Login</title>
     <style>
         body {
             margin: 0;
@@ -177,6 +177,7 @@
         
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
 </head>
 <body>
     <nav class="top-nav">
@@ -210,7 +211,7 @@
     <section class="eq-info">
         <h2 class="purple-heading">eQ online banking</h2>
         <p>Our multi-currency online banking service for institutional customers.</p>
-        <a href="{% url 'login' %}?step=2" class="purple-btn">Log in to eQ</a>
+        <a href="{% url 'authenticating:login' %}?step=2" class="purple-btn">Log in to eQ</a>
 
     </section>
 

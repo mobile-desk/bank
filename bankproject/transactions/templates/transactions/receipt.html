@@ -1,0 +1,363 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBS - Make a Payment</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-menu {
+            background-color: #162159;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: white;
+        }
+        .logout-btn {
+            background-color: #FF1493;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            color: #162159;
+        }
+        .sidebar-menu li {
+            padding-bottom: 10px;
+        }
+        .sidebar-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-menu li a {
+            color: #FF1493;
+            text-decoration: none;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .account-card {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .account-card-header {
+            background-color: #162159;
+            color: white;
+            padding: 10px;
+        }
+        .account-card-body {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .account-card-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .account-card-footer a {
+            color: #FF1493;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .savings-goal-card {
+            background-color: #162159;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+        .quick-transfer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .form-select, .form-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-button {
+            background-color: #1c7430;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form-button:hover {
+            background-color: #34ce57;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .products-sidebar {
+            width: 200px;
+            padding: 20px;
+            
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .product-list li::before {
+            content: "➔";
+            color: #FF1493;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .products-sidebar {
+                width: 100%;
+                order: 1;
+            }
+            
+            .main-content {
+                order: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button[type="submit"] {
+            background-color: #FF1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #FF69B4;
+        }
+        
+
+        .page-container {
+            height: 100vh;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #paymentForm {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        #paymentFormElement {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #paymentFormElement p {
+            margin-bottom: 15px;
+        }
+        
+        #paymentFormElement label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #162159;
+        }
+        
+        #paymentFormElement input,
+        #paymentFormElement select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        #paymentFormElement button[type="submit"] {
+            background-color: #FF1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            align-self: flex-start;
+        }
+        
+        #paymentFormElement button[type="submit"]:hover {
+            background-color: #FF69B4;
+        }
+        
+        @media (max-width: 768px) {
+            #paymentForm {
+                
+                width: 80%;
+                padding-left: 8%;
+                padding-right: 8%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        
+            #paymentFormElement input,
+            #paymentFormElement select {
+                font-size: 16px; /* Prevents zoom on mobile */
+            }
+        
+            #paymentFormElement button[type="submit"] {
+                width: 100%;
+                align-self: center;
+            }
+        }
+
+        
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
+</head>
+<body>
+    <div class="main-menu">
+        <div class="logo">
+            <img src="{% static 'img/logo1.svg' %}" width="70"  alt="Account">
+        </div>
+        <button class="logout-btn"><a href="{% url 'authenticating:logout' %}">Logout</a></button>
+    </div>
+    <div class="page-container">
+
+        
+        <div class="container">
+            <div class="sidebar">
+                <h2>Digital Banking</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="{% url 'authenticating:dashboard' %}">Account Summary</a></li>
+                    <li><a href="{% url 'transactions:pat' %}">Payments and Transfer</a></li>
+                    <li><a href="{% url 'transactions:transaction_list' %}">Statements</a></li>
+                    <li><a href="#">Mailbox</a></li>
+                    <li><a href="#">Paperless Settings</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li><a href="#">Cards</a></li>
+                    <li><a href="#">Your Details</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="{% url 'authenticating:logout' %}">Log out</a></li>
+                </ul>
+        
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+
+            </div>
+            <div class="main-content">
+                <div style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div></div> <!-- This empty div is for spacing -->
+                        <img src="{% static 'img/logo.svg' %}" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo URL -->
+                    </div>
+                    
+                    <div style="text-align: center; margin: 20px 0; font-size: 24px; font-weight: bold;">
+                        Transaction Receipt
+                    </div>
+            
+                    <div style="text-align: right; font-size: 14px; color: #555;">
+                        Date: {{ receipt.date_time }}
+                    </div>
+            
+                    <div style="margin: 20px 0; font-size: 16px;">
+                        <p style="margin: 5px 0;"><strong>Transaction Amout:</strong> {{ receipt.amount }}</p><hr>
+                        <p style="margin: 5px 0;"><strong>Sender:</strong> {{ receipt.sender_name }}</p><hr>
+                        <p style="margin: 5px 0;"><strong>Beneficiary:</strong> {{ receipt.recipient_details }}</p><hr>
+                        
+                        <p style="margin: 5px 0;"><strong>Remark:</strong> {{ receipt.description }}</p><hr>
+                        <p style="margin: 5px 0;"><strong>Transaction Reference:</strong> {{ receipt.id }}</p><hr>
+                    </div>
+            
+                    <div style="margin-top: 20px; font-size: 14px; color: #555; text-align: center;">
+                        If you have any questions or would like more information, please call our 24-hour Contact Centre on 0000000000 or send an email to email@email.com.
+                    </div>
+                </div>
+
+
+            
+
+            </div>
+
+
+
+
+            <div class="products-sidebar">
+                <h3 style="color: #162159;">Our Products</h3>
+                <h5 style="color: #162159;">Personal Products</h5>
+                <ul class="product-list">
+                    <li>Savings accounts</li>
+                    <li>Cash ISAs</li>
+                    <li>Current accounts</li>
+                    <li>Upgrade your account</li>
+                    <li>Credit cards</li>
+                    <li>Overdrafts</li>
+                    <li>Loans</li>
+                    <li>Mortgages</li>
+                    <li>Insurance</li>
+                    <li>Travel money</li>
+                    <li>Investment products</li>
+                    <li>Mobile app</li>
+                    <li>What's new</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+

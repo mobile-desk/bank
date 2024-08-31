@@ -1,0 +1,252 @@
+@font-face { 
+    font-family:"RNHouseSansRegular";
+    src:url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.eot);
+    src:url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.eot?#iefix) format("embedded-opentype"),url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.woff2) format("woff2"),url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.woff) format("woff"),url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.ttf) format("truetype"),url(https://www.rbsinternational.com/etc.clientlibs/responsive/clientlibs/clientlib_base/resources/fonts/RNHouseSansW01Regular.svg) format("svg");
+    font-display:swap;
+  } 
+    body {  
+      font-size:14px;
+      line-height:30px;
+      font-family:"RNHouseSansRegular",sans-serif;
+      color:#646068;
+      letter-spacing:.2px;
+    }  
+  * { 
+      box-sizing: border-box;
+  } 
+  
+  *  { 
+      box-sizing: border-box !important;
+  } 
+  
+  body { 
+      margin: 0;
+  } 
+  
+  body { 
+      font-size: 18px; 
+      line-height: 26px; 
+      color: #646068; 
+      letter-spacing: .2px; 
+      font-family: "RNHouseSansRegular",sans-serif; 
+      -ms-overflow-style: scrollbar;
+  } 
+  
+  html { 
+      font-family: sans-serif; 
+      font-size: 10px; 
+      -ms-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%;
+  } 
+  
+  html { 
+      -webkit-text-size-adjust: none;
+  } 
+  
+  :root { 
+      --primary: var(--bgColor); 
+      --primary-btn-bg: var(--bgColor); 
+      --primary-ask-cora-btn-text: var(--buttonTextColor); 
+      --tooltip-body: var(--toolTipTextColor);
+  } 
+  
+  .iah__container  { 
+      width: 100%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      padding: 0 20px;
+  } 
+  
+  *,:before,:after { 
+      box-sizing: border-box;
+  } 
+  
+  * ,:after,:before { 
+      box-sizing: border-box;
+  } 
+  
+  :before,:after { 
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+  } 
+  
+  .iah .iah__container::after { 
+      content: ""; 
+      clear: both; 
+      display: block;
+  } 
+  
+  .iah__l1__left  { 
+      padding-left: 146px; 
+      float: left;
+  } 
+  
+  .iah__l1__right  { 
+      float: right; 
+      position: relative; 
+      height: 48px; 
+      display: flex;
+  } 
+  
+  nav { 
+      display: block;
+  } 
+  
+  .iah__login_l1 { 
+      padding-left: 30px; 
+      float: right; 
+      padding-top: 8px; 
+      padding-bottom: 8px;
+  } 
+  
+  ul { 
+      margin-top: 0; 
+      margin-bottom: 10px;
+  } 
+  
+  .ia__nav  { 
+      margin: 0; 
+      list-style-type: none; 
+      padding-left: 0;
+  } 
+  
+  .iah .iah__container .ia__nav::after { 
+      content: ""; 
+      clear: both; 
+      display: block;
+  } 
+  
+  a { 
+      color: #337ab7; 
+      text-decoration: none;
+  } 
+  
+  a { 
+      color: #5e10b1;
+  } 
+  
+  [role="button"] { 
+      cursor: pointer;
+  } 
+  
+  .iah__login-link { 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: .16px; 
+      padding: 6px 20px 6px 42px; 
+      cursor: pointer; 
+      display: inline-block; 
+      background: transparent url("https://www.rbsinternational.com/clientlib_ia_global_login_champion/resources/images/Login-white.svg") no-repeat 13px; 
+      height: 100%; 
+      outline: 1px solid #be99e6; 
+      line-height: 20px; 
+      border-radius: 16px;
+  } 
+  
+  .iah__login-link { 
+      color: #fff; 
+      text-decoration: none; 
+      letter-spacing: .16px; 
+      padding: 6px 20px 6px 42px; 
+      cursor: pointer; 
+      display: inline-block; 
+      background: transparent url("https://www.rbsinternational.com/etc.clientlibs/responsive/components/foundation/iagloballogin/clientlibs/clientlib_ia_global_login_champion/resources/images/Login-white.svg") no-repeat 13px; 
+      height: 100%; 
+      outline: 1px solid #be99e6; 
+      line-height: 20px; 
+      border-radius: 16px;
+  } 
+  
+  a:hover { 
+      text-decoration: underline;
+  } 
+  
+  a:hover { 
+      color: #5e10b1;
+  } 
+  
+  .iah__login-link:hover { 
+      color: #fff; 
+      text-decoration: none; 
+      outline: 1px solid #fff !important;
+  } 
+  
+  a:active, html:not(.msie):not(.msedge):not(.firefox) a:hover { 
+      outline: 0;
+  } 
+  
+  .iah__l1__right a:hover::after { 
+      width: 100%;
+  } 
+  
+  .iah__l1__left li  { 
+      display: inline-block; 
+      text-align: center; 
+      float: left;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .hide__desktop  { 
+      display: none !important;
+    } 
+  }     
+  
+  .iah__l1__left li.ia-active  { 
+      background-color: #5a287d;
+  } 
+  
+  .ia__nav a  { 
+      letter-spacing: 0; 
+      text-decoration: none; 
+      cursor: pointer;
+  } 
+  
+  .iah__l1__left li a  { 
+      color: #fff; 
+      display: inline-block; 
+      padding: 9px 26px; 
+      line-height: 30px;
+  } 
+  
+  li:not([class*="active"]) a  { 
+      position: relative;
+  } 
+  
+  .iah__l1__left li.ia-active a  { 
+      color: #fff;
+  } 
+  
+  a > span  { 
+      display: block;
+  } 
+  
+  .iah__container li:not([class*="active"]) a > span  { 
+      position: relative; 
+      display: block;
+  } 
+  
+  .iah .iah__container li:not([class*="active"]) a > span::after { 
+      position: absolute; 
+      content: ""; 
+      width: 0; 
+      height: 1px; 
+      background: #fff; 
+      bottom: 4px; 
+      left: 0; 
+      transition: width .3s ease; 
+      -ms-transition: width .3s ease;
+  } 
+  
+  @media (prefers-reduced-motion: reduce){ 
+    .iah .iah__container li:not([class*="active"]) a > span::after { 
+      transition: none;
+    } 
+  }     
+  
+  .iah .iah__container li:not([class*="active"]) a:hover > span::after { 
+      width: 100%;
+  } 
+  
+  
+  

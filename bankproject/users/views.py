@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -11,7 +11,16 @@ from .models import CustomerProfile
 from django.contrib import messages
 from django.utils import timezone
 from decimal import Decimal
+import csv
+from django.http import HttpResponse
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Image
+from reportlab.lib.units import inch
+import io
 
+from reportlab.lib.utils import ImageReader
 
 
 def register_step1(request):
@@ -136,7 +145,7 @@ def user_login(request):
             user = authenticate(request, username=email, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('dashboard')
+                return redirect('authenticating:dashboard')
             else:
                 return render(request, 'users/login2.html', {'error': 'Invalid email or password'})
         return render(request, 'users/login2.html')
@@ -214,6 +223,98 @@ def dashboard(request):
     return render(request, 'users/dashboard.html', context)
 
 
+
+@login_required
+def account_transactions(request, account_id):
+    account = get_object_or_404(Account, id=account_id, user=request.user)
+    transactions = Transaction.objects.filter(account=account).order_by('-timestamp')
+
+    context = {
+        'account': account,
+        'transactions': transactions,
+    }
+
+    return render(request, 'users/account_transactions.html', context)
+
+
+
+@login_required
+def download_transactions_csv(request, account_id):
+    account = get_object_or_404(Account, id=account_id, user=request.user)
+    transactions = Transaction.objects.filter(account=account).order_by('-timestamp')
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="transactions_{account.account_number}.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Date', 'Description', 'Amount', 'Type'])
+
+    for transaction in transactions:
+        writer.writerow([transaction.timestamp, transaction.description, transaction.amount, transaction.transaction_type])
+
+    return response
+
+
+'''
+@login_required
+def download_transactions_pdf(request, account_id):
+    account = get_object_or_404(Account, id=account_id, user=request.user)
+    transactions = Transaction.objects.filter(account=account).order_by('-timestamp')
+
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="transactions_{account.account_number}.pdf"'
+
+    # Create the PDF object using ReportLab
+    doc = SimpleDocTemplate(response, pagesize=A4)
+    elements = []
+
+    # Convert SVG to PNG
+    svg_path = "static/img/logo1.svg"
+    png_image = io.BytesIO()
+    cairosvg.svg2png(url=svg_path, write_to=png_image)
+    png_image.seek(0)
+    logo = Image(ImageReader(png_image), width=2 * inch, height=2 * inch)
+    logo.hAlign = 'LEFT'
+    elements.append(logo)
+
+    # Add a title
+    styles = getSampleStyleSheet()
+    title = Paragraph(f"Transaction History for Account {account.account_number}", styles['Title'])
+    elements.append(title)
+
+    # Add some space
+    elements.append(Paragraph("<br/>", styles['Normal']))
+
+    # Create table data
+    data = [['Date', 'Description', 'Amount', 'Type']]
+    for transaction in transactions:
+        data.append([
+            transaction.timestamp.strftime("%Y-%m-%d %H:%M:%S"),
+            transaction.description,
+            f"€ {transaction.amount}",
+            transaction.transaction_type,
+        ])
+
+    # Create table
+    table = Table(data)
+    table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    ]))
+    
+    elements.append(table)
+
+    # Build the PDF
+    doc.build(elements)
+    
+    return response
+
+'''
 
 
 def home(request):

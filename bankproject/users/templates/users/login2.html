@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eQ Login</title>
+    <title>RBS - Login</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; }
         .eq-header { background-color: #162159; color: white; text-align: center; padding: 10px 0; }
@@ -57,6 +57,7 @@
         }
           
     </style>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
 </head>
 <body>
     <header class="eq-header"><h1>eQ</h1></header>
@@ -76,7 +77,7 @@
                 {% if error %}
                     <p style="color: red;">{{ error }}</p>
                 {% endif %}
-                <p>Don't have an account? <a href="{% url 'register_step1' %}">Register</a></p>
+                <p>Don't have an account? <a href="{% url 'authenticating:register_step1' %}">Register</a></p>
             </div>
             
             <div class="card">

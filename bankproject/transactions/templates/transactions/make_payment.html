@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -253,10 +254,13 @@
 
         
     </style>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
 </head>
 <body>
     <div class="main-menu">
-        <div class="logo">Logo</div>
+        <div class="logo">
+            <img src="{% static 'img/logo1.svg' %}" width="70"  alt="Account">
+        </div>
         <button class="logout-btn"><a href="{% url 'authenticating:logout' %}">Logout</a></button>
     </div>
     <div class="page-container">
@@ -268,7 +272,7 @@
                 <ul class="sidebar-menu">
                     <li><a href="{% url 'authenticating:dashboard' %}">Account Summary</a></li>
                     <li><a href="{% url 'transactions:pat' %}">Payments and Transfer</a></li>
-                    <li><a href="#">Statements</a></li>
+                    <li><a href="{% url 'transactions:transaction_list' %}">Statements</a></li>
                     <li><a href="#">Mailbox</a></li>
                     <li><a href="#">Paperless Settings</a></li>
                     <li><a href="#">Alerts</a></li>
@@ -294,111 +298,23 @@
             
 
                 
-                    <div id="paymentForm">
-                        <form method="post" id="paymentFormElement">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit">Submit Payment</button>
-                        </form>
-                    </div>
-
-                    <div id="loadingScreen" style="display: none;">
-                        <div class="loader"></div>
-                        <p>Processing your payment...</p>
-                    </div>
-
-                    <div id="codePopup" class="popup" style="display: none;">
-                        <h2>Enter <span id="codeStep"></span></h2>
-                        <input type="text" id="securityCode" />
-                        <button onclick="submitCode()">Submit</button>
-                    </div>
-
-                    <script>
-                        let currentStep = 'A';
-                        
-                        document.getElementById('paymentFormElement').addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            document.getElementById('paymentForm').style.display = 'none';
-                            document.getElementById('loadingScreen').style.display = 'block';
-                            setTimeout(() => showPopup('A'), 5000);
-                        });
-
-                        function showPopup(step) {
-                            currentStep = step;
-                            let codeType = '';
-                            switch(step) {
-                                case 'A':
-                                    codeType = 'TAX Code';
-                                    break;
-                                case 'B':
-                                    codeType = 'IMF Code';
-                                    break;
-                                case 'C':
-                                    codeType = 'OTP';
-                                    break;
-                            }
-                            document.getElementById('loadingScreen').style.display = 'none';
-                            document.getElementById('codeStep').textContent = codeType;
-                            document.getElementById('codePopup').style.display = 'block';
-                        }
-
-
-
-                        function submitCode() {
-                            const code = document.getElementById('securityCode').value;
-                            fetch('{% url "transactions:verify_code" %}', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'X-CSRFToken': '{{ csrf_token }}'
-                                },
-                                body: JSON.stringify({ step: currentStep, code: code })
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                                if (data.success) {
-                                    if (currentStep === 'C') {
-                                        window.location.href = '{% url "transactions:payment_success" %}';
-                                    } else {
-                                        document.getElementById('codePopup').style.display = 'none';
-                                        document.getElementById('loadingScreen').style.display = 'block';
-                                        setTimeout(() => showPopup(currentStep === 'A' ? 'B' : 'C'), currentStep === 'A' ? 3000 : 2000);
-                                    }
-                                } else {
-                                    alert('Invalid code. Please try again.');
-                                }
-                            });
-                        }
-
-
-                    </script>
-
-                    <style>
-                        .loader {
-                            border: 16px solid #f3f3f3;
-                            border-top: 16px solid #3498db;
-                            border-radius: 50%;
-                            width: 120px;
-                            height: 120px;
-                            animation: spin 2s linear infinite;
-                            margin: 0 auto;
-                        }
-                        @keyframes spin {
-                            0% { transform: rotate(0deg); }
-                            100% { transform: rotate(360deg); }
-                        }
-                        .popup {
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: white;
-                            padding: 20px;
-                            border: 1px solid #ccc;
-                            z-index: 1000;
-                        }
-                    </style>
+                <div class="payment-form-container">
                     
+                    <form method="post" id="paymentFormElement" class="payment-form">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div style="margin-bottom: 5px;" class="form-group">
+                                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.errors %}
+                                    <span class="error-message">{{ field.errors|join:", " }}</span>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="submit-button">Submit Payment</button>
+                    </form>
+                </div>
+                
             
             
 

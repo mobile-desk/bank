@@ -2,335 +2,570 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>site</title>
+        <title>RBS</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
         <style>
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                overflow-x: hidden;
-            }
-            
-            .top-nav, .main-nav, .hero {
-                width: 100%;
-                box-sizing: border-box;
-            }
-            
-            /* Top navigation bar */
-            .top-nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 20px;
-                background-color: #420656;
-                color: white;
-            }
-
-            .top-nav .brand {
-                font-weight: bold;
-            }
-
-            .top-nav .login-btn {
-                padding: 5px 15px;
-                background-color: #007bff;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            /* Second navigation bar */
-            .main-nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 20px;
-                background-color: #683298;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-
-            .main-nav .logo {
-                height: 40px;
-            }
-
-            .main-nav .menu {
-                display: flex;
-                gap: 20px;
-            }
-
-            .main-nav .search-bar {
-                padding: 5px 10px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-
-            /* Hero section */
-            .hero {
-                display: flex;
-                padding-bottom: 20px;
-                background-color: #683298;
-                color: white;
-            }
-
-            .hero-text {
-                flex: 2;
-                padding: 40px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
-                margin-bottom: 20px;
-            }
-
-            .hero-image {
-                flex: 2;
-                background-size: cover;
-                background-position: top center;
-                background-repeat: no-repeat;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
-            
-        
-            .features {
-                background-color: #d6d8db;
-                padding: 40px 0;
-                text-align: center;
-            }
-            
-            .feature-icons {
-                display: flex;
-                justify-content: center;
-                gap: 40px;
-                margin-bottom: 40px;
-            }
-            
-            .feature-item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .feature-item img {
-                width: 50px;
-                height: 50px;
-                margin-bottom: 10px;
-            }
-            
-            .search-section h2 {
-                margin-bottom: 20px;
-            }
-            
-            .search-section input {
-                padding: 10px;
-                width: 300px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-            
-            .feature-item i {
-                font-size: 3rem;  /* Adjust this value to make icons larger or smaller */
-                margin-bottom: 10px;
-                color: #420656;  /* This matches the top nav color, adjust as needed */
-            }
-            
-            .info-section {
-                background-color: #fbfcfc;
-                padding: 60px 60px;
-                display: flex;
-                align-items: center;
-            }
-            
-            .info-content {
-                flex: 1;
-                padding-right: 40px;
-            }
-            
-            .info-content h2 {
-                color: #420656;
-                margin-bottom: 20px;
-            }
-            
-            .purple-btn {
-                background-color: #420656;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                margin-top: 20px;
-            }
-            
-            .info-image {
-                flex: 1;
-            }
-            
-            .info-image img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 20px;  /* Adjust this value to increase or decrease the curve */
-            }
-            
-            
-            .card-section {
-                background-color: #fbfcfc;
-                padding: 60px 40px;
-                text-align: center;
-            }
-            
-            .card-section h2 {
-                color: #420656;
-                margin-bottom: 20px;
-            }
-            
-            .card-container {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 40px;
-            }
-            
-            .card {
-                flex: 1;
-                margin: 0 15px;
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                overflow: hidden;
-            }
-            
-            .card img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-            }
-            
-            .card h3 {
-                color: #420656;
-                margin: 20px 0 10px;
-            }
-            
-            .card h5 {
-                color: #333;
-                margin-bottom: 10px;
-            }
-            
-            .card p {
-                padding: 0 20px;
-                margin-bottom: 20px;
-            }
-            
-            .card a {
-                color: #420656;
-                text-decoration: none;
-                font-weight: bold;
-                display: inline-block;
-                margin-bottom: 20px;
-            }
-            
+          body {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              overflow-x: hidden;
+              font-family: Arial, sans-serif;
+          }
           
-            .split-section {
-                background-color: #dee2e6;
-                padding: 60px 40px;
-                display: flex;
-                align-items: center;
-            }
-            
-            .split-content {
-                flex: 1;
-                padding-right: 40px;
-            }
-            
-            .split-content h2 {
-                color: #420656;
-                margin-bottom: 20px;
-            }
-            
-            .tick-list {
-                list-style-type: none;
-                padding-left: 0;
-            }
-            
-            .tick-list li:before {
-                content: '✓';
-                color: #420656;
-                margin-right: 10px;
-            }
-            
-            .purple-link {
-                color: #420656;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            
-            .split-image {
-                flex: 1;
-            }
-            
-            .split-image img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 20px;
-            }
-            
-            .site-footer {
-                background-color: #420656;
+          .top-nav, .main-nav, .hero {
+              width: 100%;
+              box-sizing: border-box;
+          }
+          
+          /* Top navigation bar */
+          .top-nav {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 20px;
+              background-color: #420656;
+              color: white;
+          }
+      
+          .top-nav .brand {
+              font-weight: bold;
+          }
+      
+          .login-btn {
+              background-color: transparent;
+              color: white;
+              border: 2px solid white;
+              padding: 10px 20px;
+              font-size: 12px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              transition: all 0.3s ease;
+              border-radius: 5px;
+          }
+          
+          .login-btn i {
+              margin-right: 8px;
+          }
+          
+          .login-btn:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+          }
+          
+          /* Second navigation bar */
+          .main-nav {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 15px 20px;
+              background-color: #683298;
+              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          }
+      
+          .main-nav .logo {
+              height: 40px;
+              margin-right: 20px;
+          }
+      
+          .main-nav .menu {
+              display: flex;
+              gap: 20px;
+              flex-grow: 1;
+          }
+      
+          .main-nav .search-bar {
+              padding: 5px 10px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+          }
+      
+          /* Hero section */
+          .hero {
+              display: flex;
+              padding-bottom: 20px;
+              background-color: #683298;
+              color: white;
+          }
+      
+          .hero-text {
+              flex: 2;
+              padding: 40px;
+          }
+      
+          .hero-text h1 {
+              font-size: 2.5em;
+              margin-bottom: 20px;
+          }
+      
+          .hero-image {
+              flex: 2;
+              background-size: cover;
+              background-position: top center;
+              background-repeat: no-repeat;
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+          }
+          
+          /* Features section */
+          .features {
+              background-color: #d6d8db;
+              padding: 40px 0;
+              text-align: center;
+          }
+          
+          .feature-icons {
+              display: flex;
+              justify-content: center;
+              gap: 40px;
+              margin-bottom: 40px;
+          }
+          
+          .feature-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          
+          .feature-item img {
+              width: 50px;
+              height: 50px;
+              margin-bottom: 10px;
+          }
+          
+          .search-section h2 {
+              margin-bottom: 20px;
+          }
+          
+          .search-section input {
+              padding: 10px;
+              width: 300px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+          }
+          
+          .feature-item i {
+              font-size: 3rem;
+              margin-bottom: 10px;
+              color: #420656;
+          }
+          
+          /* Info section */
+          .info-section {
+              background-color: #fbfcfc;
+              padding: 60px 60px;
+              display: flex;
+              align-items: center;
+          }
+          
+          .info-content {
+              flex: 1;
+              padding-right: 40px;
+          }
+          
+          .info-content h2 {
+              color: #420656;
+              margin-bottom: 20px;
+          }
+          
+          .purple-btn {
+              background-color: #420656;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-top: 20px;
+          }
+          
+          .info-image {
+              flex: 1;
+          }
+          
+          .info-image img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 20px;
+          }
+          
+          /* Card section */
+          .card-section {
+              background-color: #fbfcfc;
+              padding: 60px 40px;
+              text-align: center;
+          }
+          
+          .card-section h2 {
+              color: #420656;
+              margin-bottom: 20px;
+          }
+          
+          .card-container {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 40px;
+          }
+          
+          .card {
+              flex: 1;
+              margin: 0 15px;
+              background-color: white;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              overflow: hidden;
+          }
+          
+          .card img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+          }
+          
+          .card h3 {
+              color: #420656;
+              margin: 20px 0 10px;
+          }
+          
+          .card h5 {
+              color: #333;
+              margin-bottom: 10px;
+          }
+          
+          .card p {
+              padding: 0 20px;
+              margin-bottom: 20px;
+          }
+          
+          .card a {
+              color: #420656;
+              text-decoration: none;
+              font-weight: bold;
+              display: inline-block;
+              margin-bottom: 20px;
+          }
+          
+          /* Split section */
+          .split-section {
+              background-color: #dee2e6;
+              padding: 60px 40px;
+              display: flex;
+              align-items: center;
+          }
+          
+          .split-content {
+              flex: 1;
+              padding-right: 40px;
+          }
+          
+          .split-content h2 {
+              color: #420656;
+              margin-bottom: 20px;
+          }
+          
+          .tick-list {
+              list-style-type: none;
+              padding-left: 0;
+          }
+          
+          .tick-list li:before {
+              content: '✓';
+              color: #420656;
+              margin-right: 10px;
+          }
+          
+          .purple-link {
+              color: #420656;
+              text-decoration: none;
+              font-weight: bold;
+          }
+          
+          .split-image {
+              flex: 1;
+          }
+          
+          .split-image img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 20px;
+          }
+          
+          /* Footer */
+          .site-footer {
+              background-color: #420656;
+              color: white;
+              padding: 40px;
+          }
+          
+          .footer-top {
+              display: flex;
+              justify-content: space-around;
+              margin-bottom: 20px;
+          }
+          
+          .footer-item {
+              display: flex;
+              align-items: center;
+          }
+          
+          .footer-item i {
+              margin-right: 10px;
+          }
+          
+          .site-footer hr {
+              border: none;
+              border-top: 1px solid white;
+              margin: 20px 0;
+          }
+          
+          .footer-links {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-bottom: 10px;
+          }
+          
+          .footer-links a {
+              color: white;
+              text-decoration: none;
+              margin: 0 15px;
+          }
+          
+          /* Navigation menu */
+          .main-nav {
+              background-color: #4a0e78;
+              padding: 1rem;
+          }
+          
+          .menu-toggle {
+              display: none;
+              background: none;
+              border: none;
+              color: white;
+              font-size: 1.5rem;
+              cursor: pointer;
+          }
+          
+          .nav-list {
+              display: flex;
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+          }
+          
+          .nav-item {
+              position: relative;
+              margin-right: 1rem;
+          }
+          
+          .nav-link {
+              color: white;
+              text-decoration: none;
+              padding: 0.5rem;
+          }
+          
+          .submenu {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: white;
+              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              min-width: 200px;
+          }
+          
+          .nav-item:hover .submenu {
+              display: block;
+          }
+          
+          .submenu-section {
+              padding: 1rem;
+          }
+          
+          .submenu-section h3 {
+              margin-top: 0;
+              color: #4a0e78;
+          }
+          
+          .submenu-section a {
+              display: block;
+              color: #333;
+              text-decoration: none;
+              padding: 0.3rem 0;
+          }
+          
+          /* Media queries */
+          @media (max-width: 768px) {
+              .menu-toggle {
+                  display: block;
+              }
+          
+              .nav-list {
+                  display: none;
+                  flex-direction: column;
+              }
+          
+              .nav-list.active {
+                  display: flex;
+              }
+          
+              .nav-item {
+                  margin-right: 0;
+                  margin-bottom: 1rem;
+              }
+          
+              .submenu {
+                  position: static;
+                  display: none;
+                  background-color: rgba(255,255,255,0.1);
+              }
+          
+              .nav-item.active .submenu {
+                  display: block;
+              }
+          }
+      
+          @media screen and (min-width: 769px) {
+              .menu {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+              }
+          
+              .menu-items {
+                  display: flex;
+                  align-items: center;
+              }
+              
+              .submenu-section a {
                 color: white;
-                padding: 40px;
-            }
-            
-            .footer-top {
-                display: flex;
-                justify-content: space-around;
-                margin-bottom: 20px;
-            }
-            
-            .footer-item {
-                display: flex;
-                align-items: center;
-            }
-            
-            .footer-item i {
-                margin-right: 10px;
-            }
-            
-            .site-footer hr {
-                border: none;
-                border-top: 1px solid white;
-                margin: 20px 0;
-            }
-            
-            .footer-links {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-bottom: 10px;
-            }
-            
-            .footer-links a {
-                color: white;
-                text-decoration: none;
-                margin: 0 15px;
-            }
-                  
+              }
 
-        </style>
+              .menu-right {
+                  display: flex;
+                  align-items: center;
+              }
+          
+              .search-bar {
+                  margin-right: 15px;
+              }
+          
+              .login-btn {
+                  margin-left: 15px;
+              }
+          }
+      </style>
+      
+
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
+
     </head>
     <body>
         <nav class="top-nav">
             <div class="brand">Institutional Banking</div>
-            <button class="login-btn" onclick="window.location.href='{% url 'login' %}'">Login</button>
-
+            <button class="login-btn" onclick="window.location.href='{% url 'authenticating:login' %}'">
+              <i class="fas fa-lock"></i> Login
+          </button>
+          
         </nav>
         
         <nav class="main-nav">
-            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
-            <div class="menu">
-                <!-- Add menu items here -->
+            <div class="nav-container">
+              <a href="/" class="logo">
+                <img style="width: 50px;" src="{% static 'img/logo1.svg' %}" alt="RBS International Logo">
+              </a>
+              <button class="menu-toggle">☰</button>
+
+
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Who we are</a>
+                  <div class="submenu">
+                    <div class="submenu-section">
+                      <h3>Overview</h3>
+                      <a href="{% url 'core:why_rbs_international' %}">Why RBS international</a>
+                    </div>
+                    <div class="submenu-section">
+                      <h3>Sector Expertise</h3>
+                      <a href="{% url 'core:corporate_service_providers' %}">Corporate Service Providers</a>
+                      <a href="{% url 'core:real_estate_finance' %}">Real Estate Finance</a>
+                      <a href="{% url 'core:private_equity' %}">Private Equity</a>
+                      <a href="{% url 'core:asset_management' %}">Asset Management</a>
+                      <a href="{% url 'core:private_debt' %}">Private Debt</a>
+                      <a href="{% url 'core:infrastructure_renewables' %}">Infrastructure & Renewables</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Locations</a>
+                  <div class="submenu">
+                    <div class="submenu-section">
+                      <h3>Overview</h3>
+                      <a href="{% url 'core:where_we_are' %}">Where we are</a>
+                    </div>
+                    <div class="submenu-section">
+                      <h3>Our offices and teams</h3>
+                      <a href="{% url 'core:jersey' %}">Jersey</a>
+                      <a href="{% url 'core:guernsey' %}">Guernsey</a>
+                      <a href="{% url 'core:gibraltar' %}">Gibraltar</a>
+                      <a href="{% url 'core:isle_of_man' %}">Isle of Man</a>
+                      <a href="{% url 'core:luxembourg' %}">Luxembourg</a>
+                      <a href="{% url 'core:london' %}">London</a>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">What we do</a>
+                  <div class="submenu">
+                    <div class="submenu-section">
+                      <h3>Banking</h3>
+                      <a href="{% url 'core:bank_accounts_overdrafts' %}">Bank Accounts & Overdrafts</a>
+                      <a href="{% url 'core:cash_management' %}">Cash Management</a>
+                      <a href="{% url 'core:cards_payments' %}">Cards & Payments</a>
+                      <a href="{% url 'core:financing' %}">Financing</a>
+                      <a href="{% url 'core:sustainable_finance' %}">Sustainable Finance</a>
+                    </div>
+                    <div class="submenu-section">
+                      <h3>Fund Governance & Oversight</h3>
+                      <a href="{% url 'core:depositary_services' %}">Depositary Services</a>
+                    </div>
+                    <div class="submenu-section">
+                      <h3>Foreign Exchange & Liquidity Risk Management</h3>
+                      <a href="{% url 'core:markets' %}">Markets</a>
+                      <a href="{% url 'core:foreign_exchange' %}">Foreign Exchange (FX)</a>
+                      <a href="{% url 'core:money_market_deposits' %}">Money Market Deposits</a>
+                      <a href="{% url 'core:notice_deposits' %}">Notice Deposits</a>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="nav-item">
+                  <a href="{% url 'core:insights' %}" class="nav-link">Insights</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'core:news' %}" class="nav-link">News</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">eQ Digital Banking</a>
+                 
+                </li>
+
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Help & Support</a>
+                  
+                </li>
+              </ul>
             </div>
-            <input type="text" class="search-bar" placeholder="Search...">
-        </nav>
+          </nav>
+          
         
         <section class="hero">
             <div class="hero-text">
@@ -343,23 +578,24 @@
         <section class="features">
             <div class="feature-icons">
                 <div class="feature-item">
-                    <i class="fas fa-briefcase"></i>
+                    <img style='width: 100px; height: 100px;' src="{% static  'img/home/1.png' %}" alt="Description of the image">
+
                     <p>Learn about our <br>specialist sectors</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-sign"></i>
+                    <img style='width: 100px; height: 100px;' src="{% static  'img/home/2.png' %}" alt="Description of the image">
                     <p>See where our <br>teams are based</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-lightbulb"></i>
+                    <img style='width: 100px; height: 100px;' src="{% static  'img/home/3.png' %}" alt="Description of the image">
                     <p>Read latest insights <br>and analysis</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-file-alt"></i>
+                    <img style='width: 100px; height: 100px;' src="{% static  'img/home/4.png' %}" alt="Description of the image">
                     <p>Make a change to <br>your account</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-desktop"></i>
+                    <img style='width: 100px; height: 100px;' src="{% static  'img/home/5.png' %}" alt="Description of the image">
                     <p>Log in to eQ <br>Online Banking</p>
                 </div>
             </div>
@@ -481,6 +717,23 @@
         </footer>
         
 
+        
+
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.nav-list').classList.toggle('active');
+              });
+              
+              document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function() {
+                  if (window.innerWidth <= 768) {
+                    this.classList.toggle('active');
+                  }
+                });
+              });
+              
+
+        </script>
 
     </body>
 </html>

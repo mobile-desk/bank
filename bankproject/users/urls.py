@@ -15,4 +15,7 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('', views.home, name='home'),
+    path('account/<int:account_id>/transactions/', views.account_transactions, name='account_transactions'),
+    path('account/<int:account_id>/transactions/download/', views.download_transactions_csv, name='download_transactions_csv'),
+    #path('account/<int:account_id>/transactions/download_pdf/', views.download_transactions_pdf, name='download_transactions_pdf'),
 ]

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Banking - Account Summary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.svg' %}">
     <style>
         body {
             margin: 0;
@@ -167,9 +167,9 @@
         }
         
         .account-icon {
-            width: 100px;
-            height: 100px;
-            margin-right: -40px; /* Reduced margin to bring them closer */
+            width: 50px;
+            height: 50px;
+            margin-right: 8px; /* Reduced margin to bring them closer */
         }
         
         .balance-info {
@@ -197,7 +197,9 @@
 </head>
 <body>
     <div class="main-menu">
-        <div class="logo">Logo</div>
+        <div class="logo">
+            <img src="{% static 'img/logo1.svg' %}" width="70"  alt="Account">
+        </div>
         <button class="logout-btn"><a href="{% url 'authenticating:logout' %}">Logout</a></button>
     </div>
     <div class="container">
@@ -206,7 +208,7 @@
             <ul class="sidebar-menu">
                 <li><a href="#">Account Summary</a></li>
                 <li><a href="{% url 'transactions:pat' %}">Payments and Transfer</a></li>
-                <li><a href="#">Statements</a></li>
+                <li><a href="{% url 'transactions:transaction_list' %}">Statements</a></li>
                 <li><a href="#">Mailbox</a></li>
                 <li><a href="#">Paperless Settings</a></li>
                 <li><a href="#">Alerts</a></li>
@@ -246,7 +248,7 @@
         <div class="main-content">
             <h1 style="color: #162159;">Account Summary</h1>
             <p>Customer number: {{ user.username }}</p>
-            <p>Last login: <!-- Fetch last login time --></p>
+            <p>Last login: {{ last_login }}<!-- Fetch last login time --></p>
             <h3 style="color: #162159;">Personal Accounts</h3>
             <!-- Loop through user's accounts -->
             {% for account in user.account_set.all %}
@@ -271,7 +273,7 @@
                 <div class="account-card-footer">
                     <a href="{% url 'transactions:make_payment' %}" style="color: #FF1493;">Make a Payment</a>
                     <a href="#" style="color: #FF1493;">View Account Details</a>
-                    <a href="#" style="color: #FF1493;">View Transactions</a>
+                    <a href="{% url 'authenticating:account_transactions' account.id %}" style="color: #FF1493;">View Transactions</a>
                 </div>
             </div>
             {% endfor %}

@@ -7,8 +7,9 @@ app_name = 'transactions'
 urlpatterns = [
     path('pat/', views.pat, name='pat'),
     path('make-payment/', views.make_payment, name='make_payment'),
-    path('verify-code/', views.verify_code, name='verify_code'),
-    path('payment-success/', views.payment_success, name='payment_success'),
+    path('verify-transaction/', views.verify_transaction, name='verify_transaction'),
+    path('transactions/', views.transaction_list, name='transaction_list'),
+    path('receipt/<uuid:receipt_id>/', views.display_receipt, name='display_receipt'),
 
 
 
